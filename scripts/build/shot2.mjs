@@ -1,0 +1,12 @@
+import { chromium } from 'playwright-core';
+const [,,url,out,w='1440',full='1']=process.argv;
+const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});
+const ctx=await b.newContext({viewport:{width:+w,height:900}});
+await ctx.addCookies([{name:'onyx_age_verified',value:'1',url:new URL(url).origin}]);
+const p=await ctx.newPage();
+await p.goto(url,{waitUntil:'networkidle',timeout:90000}).catch(()=>{});
+await p.evaluate(()=>document.querySelectorAll('img[loading=lazy]').forEach(i=>i.loading='eager'));
+await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=500){window.scrollTo(0,y);await new Promise(r=>setTimeout(r,150));}window.scrollTo(0,0);});
+await p.waitForTimeout(1500);
+await p.screenshot({path:out,fullPage:full==='1'});
+await b.close();
