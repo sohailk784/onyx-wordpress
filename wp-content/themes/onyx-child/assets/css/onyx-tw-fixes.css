@@ -1,0 +1,37 @@
+/* Neutralise Hello Elementor / WooCommerce element styles inside React-ported markup (.onyx-tw). */
+.onyx-tw :where(button, [type=button], [type=submit]) { background-color: transparent; color: inherit; border-color: var(--border); border-radius: 0; padding: 0; font-size: inherit; font-weight: inherit; line-height: inherit; white-space: normal; }
+.onyx-tw :where(button, [type=button], [type=submit]):where(:hover, :focus) { background-color: transparent; color: inherit; }
+.onyx-tw a { text-decoration: none; }
+.onyx-tw :where(a) { color: inherit; }
+.onyx-tw :where(table) { margin: 0; font-size: inherit; }
+.onyx-tw table td, .onyx-tw table th { border: 0; line-height: inherit; vertical-align: middle; }
+.onyx-tw table tbody > tr:nth-child(odd) > td, .onyx-tw table tbody > tr:nth-child(odd) > th { background-color: transparent; }
+.onyx-tw table tbody tr:hover > td, .onyx-tw table tbody tr:hover > th { background-color: transparent; }
+.onyx-tw dl, .onyx-tw dd, .onyx-tw ol, .onyx-tw ul { margin: 0; }
+.onyx-tw img { max-width: 100%; }
+.onyx-tw .woocommerce-Price-amount { font-weight: inherit; color: inherit; }
+.onyx-tw details > summary { list-style: none; }
+.onyx-tw details > summary::-webkit-details-marker { display: none; }
+.onyx-tw details[open] > summary svg { transform: rotate(180deg); color: var(--accent); }
+.onyx-tw :where(.onyx-wish) { position: relative; }
+.onyx-tw .onyx-wish .onyx-wish-hit { position: absolute; inset: 0; opacity: 0; overflow: hidden; }
+.onyx-tw .onyx-wish .onyx-wish-hit .tinv-wraper, .onyx-tw .onyx-wish .onyx-wish-hit a { display: block !important; width: 100%; height: 100%; margin: 0 !important; }
+.onyx-tw .onyx-wish.is-active svg { fill: #2563eb; color: #2563eb; }
+.onyx-tw .onyx-zoom img { transform-origin: center; }
+.onyx-tw .onyx-zoom:hover img { transform: scale(2); }
+.onyx-tw input[type=text], .onyx-tw input[type=email], .onyx-tw input[type=number], .onyx-tw input[type=search], .onyx-tw select, .onyx-tw textarea { border-radius: inherit; padding: revert-layer; }
+/* Header bits that React handled with state/animation. */
+.onyx-header .onyx-ticker-item { transform: translateY(120%); opacity: 0; transition: transform .9s cubic-bezier(.22,1,.36,1), opacity .9s; }
+.onyx-header .onyx-ticker-item.is-active { transform: translateY(0); opacity: 1; }
+.onyx-header .onyx-ticker-item.is-leaving { transform: translateY(-120%); opacity: 0; }
+.onyx-header .onyx-dd-panel { display: none; }
+.onyx-header .onyx-dd:hover .onyx-dd-panel, .onyx-header .onyx-dd:focus-within .onyx-dd-panel { display: block; }
+.onyx-tw [hidden] { display: none !important; }
+.onyx-tw .text-accent > svg, .onyx-tw svg.text-accent { color: var(--accent); }
+body.admin-bar .onyx-header.sticky { top: 32px; }
+.ehf-header #masthead, .ehf-footer .footer-width-fixer { display: none; }
+/* The storefront's own WhatsApp button (footer.php) replaces the Click to Chat widget. */
+.ht-ctc.ht-ctc-chat { display: none !important; }
+body.onyx-cart-page .site-main, body.onyx-cart-page .page-content { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+body.onyx-cart-page .woocommerce { max-width: none; }
+body.onyx-cart-page .woocommerce-notices-wrapper:empty { display: none; }

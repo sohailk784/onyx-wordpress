@@ -1,0 +1,16 @@
+/* Elementor widget skins that reproduce the React storefront components 1:1. */
+
+/* Accordion → FAQ cards (rounded-xl border bg-card, +/- in accent) */
+.elementor-widget-accordion .elementor-accordion { display: flex; flex-direction: column; gap: .75rem; }
+.elementor-widget-accordion .elementor-accordion .elementor-accordion-item { border: 1px solid var(--onyx-border) !important; border-radius: .75rem; background: var(--onyx-card); overflow: hidden; }
+.elementor-widget-accordion .elementor-accordion .elementor-accordion-item + .elementor-accordion-item { border-top: 1px solid var(--onyx-border) !important; }
+.elementor-widget-accordion .elementor-accordion .elementor-tab-title { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem !important; border: 0 !important; font-size: .875rem; line-height: 1.25rem; font-weight: 600; color: var(--onyx-foreground); cursor: pointer; }
+.elementor-widget-accordion .elementor-accordion .elementor-tab-title .elementor-accordion-title { color: inherit !important; font: inherit !important; text-align: left; }
+.elementor-widget-accordion .elementor-accordion .elementor-accordion-icon { display: none !important; }
+.elementor-widget-accordion .elementor-accordion .elementor-tab-title::after { content: "+"; color: var(--onyx-accent); font-weight: 600; margin-left: .5rem; }
+.elementor-widget-accordion .elementor-accordion .elementor-tab-title.elementor-active::after { content: "-"; }
+.elementor-widget-accordion .elementor-accordion .elementor-tab-content { padding: 0 1.25rem 1.25rem !important; border: 0 !important; font-size: .875rem; line-height: 1.25rem; color: var(--onyx-muted-foreground); }
+.elementor-widget-accordion .elementor-accordion .elementor-tab-content p { margin: 0; }
+
+/* Home hero: gradient accent span (live: bg-gradient-to-r from-accent via-sky-300 to-accent bg-clip-text) */
+.elementor-element-764d5f9 .elementor-heading-title span{background-image:linear-gradient(to right,#2885ef,#7dd3fc,#2885ef);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
