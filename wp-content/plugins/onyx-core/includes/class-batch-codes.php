@@ -132,8 +132,9 @@ class Onyx_Batch_Codes {
 		</form>
 		<?php echo $result; // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		<style>
-			.onyx-cc{display:flex;gap:.75rem;flex-wrap:wrap}.onyx-cc input{flex:1;min-width:220px;padding:.75rem 1rem!important}
-			.onyx-cc button{background:var(--onyx-primary,#001a61);color:#fff;border:0;border-radius:.5rem;padding:.75rem 1.5rem;font-weight:700;cursor:pointer}
+			.onyx-cc{display:flex;gap:.75rem;flex-wrap:wrap}.onyx-cc input{flex:1;min-width:220px;padding:.75rem 1rem!important;font-size:.875rem!important;line-height:1.25rem!important;border-radius:.5rem!important;height:46px}
+			.onyx-cc button{background:var(--onyx-primary,#001a61);color:#fff;border:0;border-radius:.5rem;padding:.75rem 1.5rem;font-size:.875rem;line-height:1.25rem;font-weight:700;cursor:pointer;height:46px}
+			@media(max-width:639px){.onyx-cc{flex-direction:column}.onyx-cc input{min-width:0}}
 			.onyx-cc__result{margin-top:1rem;border-radius:.5rem;padding:1rem;font-size:.875rem;border:1px solid}
 			.onyx-cc__result.is-ok{border-color:rgba(16,185,129,.5);background:#ecfdf5;color:#064e3b}
 			.onyx-cc__result.is-bad{border-color:rgba(231,0,11,.4);background:rgba(231,0,11,.06);color:#b91c1c}

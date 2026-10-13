@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'ONYX_CHILD_VERSION', '1.1.0' );
+define( 'ONYX_CHILD_VERSION', '1.2.0' );
 
 add_action( 'wp_enqueue_scripts', function () {
 	$dir = get_stylesheet_directory_uri();
@@ -20,6 +20,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'onyx-app', $dir . '/assets/css/onyx-app.css', array( 'onyx-base' ), ONYX_CHILD_VERSION );
 	wp_enqueue_style( 'onyx-elementor-skin', $dir . '/assets/css/elementor-skin.css', array( 'onyx-base' ), ONYX_CHILD_VERSION );
 	wp_enqueue_style( 'onyx-tw-fixes', $dir . '/assets/css/onyx-tw-fixes.css', array( 'onyx-app' ), ONYX_CHILD_VERSION );
+	wp_enqueue_style( 'onyx-fluent-skin', $dir . '/assets/css/fluent-skin.css', array(), ONYX_CHILD_VERSION );
 	if ( function_exists( 'is_product' ) && is_product() ) {
 		wp_enqueue_script( 'onyx-product', $dir . '/assets/js/onyx-product.js', array(), ONYX_CHILD_VERSION, true );
 	}

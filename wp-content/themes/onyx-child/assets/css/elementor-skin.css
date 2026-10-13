@@ -14,3 +14,73 @@
 
 /* Home hero: gradient accent span (live: bg-gradient-to-r from-accent via-sky-300 to-accent bg-clip-text) */
 .elementor-element-764d5f9 .elementor-heading-title span{background-image:linear-gradient(to right,#2885ef,#7dd3fc,#2885ef);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* Home hero overlay parity: bg-[#050a1a]/72 + gradient-to-t from /90 via /35 to /50, plus "Scroll to explore" */
+.elementor-element-502616f{position:relative}
+.elementor-element-502616f::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,10,26,.9),rgba(5,10,26,.35),rgba(5,10,26,.5));pointer-events:none;z-index:1}
+.elementor-element-502616f>.e-con-inner,.elementor-element-502616f>.elementor-element{position:relative;z-index:2}
+.elementor-element-502616f::before{z-index:1}
+.onyx-scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:10px;text-transform:uppercase;letter-spacing:.4em;color:#fff;opacity:.5;pointer-events:none;z-index:3;animation:onyxScroll 2.6s ease-in-out infinite;display:none}
+@media(min-width:768px){.onyx-scroll-hint{display:block}}
+@keyframes onyxScroll{0%,100%{transform:translate(-50%,0);opacity:.4}50%{transform:translate(-50%,8px);opacity:.85}}
+.onyx-hero-blob{position:absolute;border-radius:9999px;pointer-events:none;z-index:1}
+.onyx-hero-blob.b1{left:-8rem;top:25%;width:24rem;height:24rem;background:rgba(40,133,239,.3);filter:blur(120px);animation:onyxB1 14s ease-in-out infinite}
+.onyx-hero-blob.b2{right:-5rem;bottom:0;width:20rem;height:20rem;background:rgba(40,133,239,.2);filter:blur(140px);animation:onyxB2 18s ease-in-out infinite}
+@keyframes onyxB1{50%{transform:translate(30px,-20px)}}@keyframes onyxB2{50%{transform:translate(-25px,15px)}}
+.elementor-element-502616f{overflow:hidden}
+
+/* Home lab pills */
+.elementor-element-387487d{column-gap:40px!important;row-gap:12px!important}
+.elementor-element-387487d .elementor-widget-text-editor,.elementor-element-387487d .elementor-widget-text-editor p{font-size:12px!important;line-height:16px!important;font-weight:600!important;text-transform:uppercase;letter-spacing:.05em;color:#5d646f!important;white-space:nowrap;margin:0}
+
+/* Home: Research Materials & Analytical Standards image (rounded-3xl aspect-video shadow-2xl) */
+.elementor-element-a98076e img,.elementor-element-0fea733 img{border-radius:24px;object-fit:cover;width:100%}
+.elementor-element-a98076e img{aspect-ratio:16/9}
+.elementor-element-0fea733 img{aspect-ratio:4/3}
+.elementor-element-506abc0{margin-top:32px!important}
+.elementor-element-9d769d5{margin-top:28px!important}
+/* Research Areas: centred 48px icons, glow */
+.elementor-element-00b4021{position:relative;overflow:hidden;background:linear-gradient(to bottom right,#001a61,#0a1733)!important}
+.elementor-element-2008537>.elementor-element{text-align:center;align-items:center!important}
+.elementor-element-2008537 .elementor-widget-html{width:100%;text-align:center}
+.elementor-element-2008537 .elementor-widget-html svg{width:48px;height:48px;margin:0 auto;display:block}
+/* Research Supply cards: icon 28px top-left, min-height */
+.elementor-element-d397ffa .elementor-widget-html svg{width:28px;height:28px;display:block;margin-bottom:12px}
+.elementor-element-d397ffa>.elementor-element{min-height:180px}
+
+/* Collapsible FAQ items built from containers (.onyx-acc: first child = question, second = answer) */
+.onyx-acc>.elementor-element:first-child{cursor:pointer;user-select:none}
+.onyx-acc>.elementor-element:first-child svg{transition:transform .2s}
+.onyx-acc.is-open>.elementor-element:first-child svg{transform:rotate(180deg)}
+.onyx-acc:not(.is-open)>.elementor-element:nth-child(n+2){display:none!important}
+.onyx-acc .elementor-widget-text-editor p{margin:0}
+.onyx-acc>.elementor-element:first-child p{display:flex;justify-content:space-between;align-items:center;gap:16px}
+
+/* Policy pages (live Policies.tsx parity) */
+.onyx-toc{border-left:1px solid #e2e7ee;gap:4px!important}
+.onyx-toc .elementor-widget-text-editor{margin:0!important}
+.onyx-toc .elementor-widget-text-editor p{margin:0}
+.onyx-toc .elementor-widget-text-editor a{display:block;margin-left:-1px;border-left:1px solid transparent;padding:6px 0 6px 16px;font-size:14px;line-height:20px;color:#5d646f!important;transition:color .15s,border-color .15s}
+.onyx-toc .elementor-widget-text-editor a:hover{color:#2885ef!important;border-color:#2885ef}
+.onyx-clause{align-items:baseline!important;gap:12px!important}
+.onyx-clause>.elementor-widget-text-editor:first-child{min-width:36px;flex-shrink:0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.onyx-clause>.elementor-widget-text-editor:last-child,.onyx-clause>.elementor-widget-text-editor:last-child p{line-height:22.75px!important}
+.onyx-clause>.elementor-widget-text-editor p{margin:0}
+.onyx-clause.d1+.onyx-clause.d1,.onyx-clause.d1+.e-con:not(.onyx-clause)+.onyx-clause.d1{margin-top:14px}
+.e-con:has(>.onyx-clause.d1)>*+*{margin-top:14px}
+.onyx-clause.d2+.onyx-clause.d2{margin-top:10px}
+.e-con:has(>.onyx-clause.d2){border-left:1px solid rgba(226,231,238,.7);padding-left:20px!important;margin-top:12px}
+.e-con:has(>.onyx-clause.d2)>*+*{margin-top:10px}
+.onyx-sechead{align-items:baseline!important;margin-bottom:20px}
+.onyx-sechead>.elementor-widget-text-editor:first-child{min-width:36px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.onyx-toc{gap:0!important}
+.onyx-toc>.elementor-element{--margin-top:0px;--margin-bottom:0px;margin-top:0!important;margin-bottom:4px!important}
+.onyx-toc>.elementor-element:last-child{margin-bottom:0!important}
+.elementor-widget-text-editor p>svg:first-child{margin-right:8px}
+.onyx-toc>.elementor-element,.onyx-toc>.elementor-element>.elementor-widget-container{padding:0!important}
+.page-id-462
+PHP: 2026-10-13 14:36:44 [notice X 0][/workspace/onyx/local/wp-content/plugins/elementor/modules/global-classes/atomic-global-styles.php::410] Elementor\Modules\GlobalClasses\Atomic_Global_Styles::get_cache_root_key(): Implicitly marking parameter $key as nullable is deprecated, the explicit nullable type must be used instead [array (
+  'trace' => '
+#0: Elementor\Core\Logger\Manager -> shutdown()
+',
+)] .elementor-widget-image img{border-radius:18px}

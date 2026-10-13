@@ -102,3 +102,9 @@
 	var dc = document.querySelector( '[data-onyx-delay-close]' );
 	if ( dc ) dc.addEventListener( 'click', function () { dn.hidden = true; try { sessionStorage.setItem( 'onyx_order_delay_notice_dismissed_v1', '1' ); } catch ( e ) {} } );
 } )();
+
+/* Home hero "Scroll to explore" hint (live parity) */
+document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('.elementor-element-502616f');if(h&&!h.querySelector('.onyx-scroll-hint')){var d=document.createElement('div');d.className='onyx-scroll-hint';d.setAttribute('aria-hidden','true');d.textContent='Scroll to explore';h.appendChild(d);['b1','b2'].forEach(function(c){var b=document.createElement('div');b.className='onyx-hero-blob '+c;b.setAttribute('aria-hidden','true');h.appendChild(b);});}});
+
+/* .onyx-acc collapsible containers (doctor FAQ, live parity) */
+document.addEventListener('click',function(e){var q=e.target.closest('.onyx-acc>.elementor-element:first-child');if(!q)return;q.parentElement.classList.toggle('is-open');});

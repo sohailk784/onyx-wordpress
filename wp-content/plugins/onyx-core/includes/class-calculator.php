@@ -52,10 +52,10 @@ class Onyx_Calculator {
 		</div>
 		<style>
 			.onyx-calc{background:var(--onyx-primary,#001a61);color:#f6f9fc;border-radius:1rem;padding:1.5rem;font-size:.875rem}
-			.onyx-calc__head{display:flex;align-items:center;gap:.75rem}.onyx-calc__head h3{font-size:1rem;font-weight:700;margin:0;color:#fff}
+			.onyx-calc__head{display:flex;align-items:center;gap:.75rem}.onyx-calc__head h3{font-size:1rem;line-height:1.5rem;font-weight:700;margin:0;color:#fff}
 			.onyx-calc__icon{display:flex;width:2.25rem;height:2.25rem;border-radius:999px;background:rgba(255,255,255,.1);align-items:center;justify-content:center}
 			.onyx-calc hr{border:0;height:1px;background:rgba(255,255,255,.1);margin:1.25rem 0}
-			.onyx-calc__field{display:block;margin-bottom:1rem}.onyx-calc__field>span:first-child,.onyx-calc__label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:rgba(246,249,252,.6);margin:0}
+			.onyx-calc__field{display:block;margin-bottom:1rem}.onyx-calc__field>span:first-child,.onyx-calc__label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;line-height:16.5px;color:rgba(246,249,252,.6);margin:0}
 			.onyx-calc__input{display:flex;align-items:center;margin-top:.5rem;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);border-radius:.5rem}
 			.onyx-calc__input:focus-within{border-color:var(--onyx-accent,#2885ef)}
 			.onyx-calc__input input{flex:1;background:transparent!important;border:0!important;color:#fff!important;box-shadow:none!important;-moz-appearance:textfield}
@@ -63,9 +63,9 @@ class Onyx_Calculator {
 			.onyx-calc__input input::placeholder{color:rgba(246,249,252,.35)}
 			.onyx-calc__input em{font-style:normal;font-size:.75rem;font-weight:600;color:rgba(246,249,252,.5);padding-right:.75rem}
 			.onyx-calc__warn{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);border-radius:.5rem;padding:.5rem .75rem;font-size:.75rem}
-			.onyx-calc dl{margin:.75rem 0 0}.onyx-calc dl div{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
-			.onyx-calc dl div:last-child{border-bottom:0}.onyx-calc dt{color:rgba(246,249,252,.85);font-weight:400}.onyx-calc dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-			.onyx-calc__fine{margin:1.25rem 0 0;font-size:11px;line-height:1.6;color:rgba(246,249,252,.45)}
+			.onyx-calc dl{margin:.75rem 0 0}.onyx-calc dl div{line-height:20px;display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+			.onyx-calc dl div:last-child{border-bottom:0}.onyx-calc dt,.onyx-calc dd{line-height:20px}.onyx-calc dt{color:rgba(246,249,252,.85);font-weight:400}.onyx-calc dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+			.onyx-calc__fine{margin:1.25rem 0 0;font-size:11px;line-height:1.625;color:rgba(246,249,252,.45)}
 		</style>
 		<script>
 		(function(){document.querySelectorAll('.onyx-calc').forEach(function(c){

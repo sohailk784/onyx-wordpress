@@ -266,3 +266,44 @@ add_shortcode( 'onyx_product_tabs', function () {
 	<?php
 	return ob_get_clean();
 } );
+
+/*
+ * Wholesale application (Fluent Form titled "Wholesale Application"): live creates a trade account on submit.
+ * Validate the password pair, create a WooCommerce customer, and never store passwords in the entry.
+ */
+function onyx_is_wholesale_form( $form ) {
+	return $form && isset( $form->title ) && 'Wholesale Application' === $form->title;
+}
+add_filter( 'fluentform/validation_errors', function ( $errors, $data, $form ) {
+	if ( ! onyx_is_wholesale_form( $form ) || ! isset( $data['password'] ) ) {
+		return $errors;
+	}
+	$pw = (string) $data['password'];
+	if ( strlen( $pw ) < 8 ) {
+		$errors['password'] = array( 'Password must be at least 8 characters.' );
+	} elseif ( $pw !== (string) ( $data['password_confirm'] ?? '' ) ) {
+		$errors['password_confirm'] = array( 'Passwords do not match.' );
+	}
+	if ( ! empty( $data['email'] ) && email_exists( sanitize_email( $data['email'] ) ) ) {
+		$errors['email'] = array( 'An account with this email already exists. Please sign in.' );
+	}
+	return $errors;
+}, 10, 3 );
+add_filter( 'fluentform/insert_response_data', function ( $data, $form_id ) {
+	$form = function_exists( 'wpFluent' ) ? wpFluent()->table( 'fluentform_forms' )->find( $form_id ) : null;
+	if ( ! onyx_is_wholesale_form( $form ) || empty( $data['password'] ) || empty( $data['email'] ) ) {
+		return $data;
+	}
+	$email = sanitize_email( $data['email'] );
+	if ( ! email_exists( $email ) && function_exists( 'wc_create_new_customer' ) ) {
+		$names = explode( ' ', trim( (string) ( $data['full_name'] ?? '' ) ), 2 );
+		$uid   = wc_create_new_customer( $email, '', $data['password'], array( 'first_name' => $names[0] ?? '', 'last_name' => $names[1] ?? '' ) );
+		if ( ! is_wp_error( $uid ) ) {
+			update_user_meta( $uid, 'billing_company', sanitize_text_field( $data['business'] ?? '' ) );
+			update_user_meta( $uid, 'billing_phone', sanitize_text_field( $data['phone'] ?? '' ) );
+			update_user_meta( $uid, 'onyx_wholesale_status', 'pending' );
+		}
+	}
+	unset( $data['password'], $data['password_confirm'] );
+	return $data;
+}, 10, 2 );

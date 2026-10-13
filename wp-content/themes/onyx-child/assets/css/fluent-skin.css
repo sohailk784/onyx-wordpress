@@ -1,0 +1,44 @@
+/* Fluent Forms skinned to match live React forms (onyxhealth.net) */
+.fluentform .ff-el-group{margin-bottom:16px}
+.fluentform .ff-t-container{gap:16px;margin-bottom:0}
+.fluentform .ff-t-container .ff-t-cell{padding:0!important}
+.fluentform .ff-el-input--label{margin-bottom:6px!important;display:block}
+.fluentform .ff-el-input--label label{font-size:12px!important;line-height:16px!important;font-weight:600!important;text-transform:uppercase;letter-spacing:.05em;color:#5d646f!important;margin:0}
+.fluentform .ff-el-is-required.asterisk-right label:after{content:" *";color:#2885ef!important;margin-left:0}
+.fluentform .ff-el-form-control{font-size:14px!important;line-height:20px!important;padding:12px 16px!important;border:1px solid #e2e7ee!important;border-radius:14px!important;background:#fbfcfe!important;color:#040d1e!important;box-shadow:none!important;height:auto!important;min-height:46px;transition:border-color .15s,box-shadow .15s}
+.fluentform .ff-el-form-control:focus{border-color:#2885ef!important;box-shadow:0 0 0 2px rgba(40,133,239,.2)!important;outline:none}
+.fluentform .ff-el-form-control::placeholder{color:#8a919c}
+.fluentform select.ff-el-form-control{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235d646f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 14px center!important;padding-right:40px!important}
+.fluentform textarea.ff-el-form-control{min-height:126px}
+/* phone: UK flag + dial code prefix like live */
+.fluentform .onyx-phone .ff-el-input--content{position:relative}
+.fluentform .onyx-phone .ff-el-input--content::before{content:"\1F1EC\1F1E7  +44  \25BE";position:absolute;left:1px;top:1px;bottom:1px;width:96px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#040d1e;border-right:1px solid #e2e7ee;border-radius:14px 0 0 14px;pointer-events:none;z-index:1}
+.fluentform .onyx-phone .ff-el-form-control{padding-left:108px!important}
+.fluentform .ff_submit_btn_wrapper{margin-top:4px}
+.fluentform .ff-btn-submit{width:100%;display:inline-flex!important;align-items:center;justify-content:center;gap:8px;font-size:14px!important;line-height:20px!important;font-weight:700!important;padding:14px 24px!important;border-radius:9999px!important;background:#2885ef!important;color:#fff!important;border:0!important;box-shadow:0 10px 15px -3px rgba(40,133,239,.3),0 4px 6px -4px rgba(40,133,239,.3)!important;transition:transform .15s,box-shadow .15s}
+.fluentform .ff-btn-submit:hover{transform:scale(1.02);box-shadow:0 10px 15px -3px rgba(40,133,239,.5),0 4px 6px -4px rgba(40,133,239,.5)!important;opacity:1!important}
+.onyx-form-contact .ff-btn-submit::before{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z'/%3E%3Cpath d='m21.854 2.147-10.94 10.939'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z'/%3E%3Cpath d='m21.854 2.147-10.94 10.939'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* Wholesale form (live WholesaleApplicationForm) */
+.onyx-form-wholesale{margin-top:24px}
+.onyx-form-wholesale .ff-t-container{gap:20px}
+.onyx-form-wholesale .ff-el-input--label label{font-size:12px!important;font-weight:700!important;text-transform:none!important;letter-spacing:0!important;color:#475569!important}
+.onyx-form-wholesale .ff-el-input--label{margin-bottom:8px!important}
+.onyx-form-wholesale .ff-el-form-control{height:48px!important;min-height:48px;padding:0 16px!important;border-color:#e2e8f0!important;border-radius:12px!important;background-color:#fff!important;color:#0f172a!important}
+.onyx-form-wholesale .ff-el-form-control:focus{box-shadow:0 0 0 4px rgba(40,133,239,.1)!important}
+.onyx-form-wholesale .ff-el-form-control::placeholder{color:#94a3b8}
+.onyx-form-wholesale textarea.ff-el-form-control{height:auto!important;min-height:112px;padding:12px 16px!important}
+.onyx-form-wholesale .ff-el-tc,.onyx-form-wholesale .ff_t_c{margin-top:4px}
+.onyx-form-wholesale .ff-el-group:has(.ff_t_c),.onyx-form-wholesale .ff-el-group.ff-el-tc{display:flex;gap:12px;align-items:flex-start;border:1px solid #e0f2fe;background:rgba(240,249,255,.6);border-radius:12px;padding:16px;font-size:12px;line-height:20px;color:#475569}
+.onyx-form-wholesale input[type=checkbox]{width:16px;height:16px;margin-top:4px;accent-color:#2563eb}
+.onyx-form-wholesale .ff_submit_btn_wrapper{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;border-top:1px solid #f1f5f9;padding-top:20px;margin-top:24px}
+.onyx-form-wholesale .ff_submit_btn_wrapper::before{content:"Trade pricing is released privately after business and volume review. Submission does not guarantee account approval.";max-width:28rem;font-size:11px;line-height:20px;color:#94a3b8}
+.onyx-form-wholesale .ff-btn-submit{width:auto;border-radius:12px!important;padding:14px 24px!important;box-shadow:0 10px 15px -3px rgba(40,133,239,.2),0 4px 6px -4px rgba(40,133,239,.2)!important}
+.onyx-form-wholesale .ff-btn-submit::after{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat}
+.onyx-form-wholesale .ff-btn-submit:hover{transform:translateY(-2px)}
+.onyx-form-wholesale .onyx-phone .ff-el-form-control{padding-left:108px!important}
+.onyx-form-wholesale .ff-el-group{margin-bottom:16px}
+.onyx-form-wholesale .ff-el-tc label,.onyx-form-wholesale .ff_t_c,.onyx-form-wholesale .ff-el-tc .ff-el-form-check-label{font-size:12px!important;line-height:20px!important;font-weight:400!important;text-transform:none!important;letter-spacing:0!important;color:#475569!important}
+.fluentform .ff-el-is-required.asterisk-right label:after{margin-left:2px!important}
+@media(min-width:640px){.onyx-form-wholesale .ff_submit_btn_wrapper{display:flex!important;flex-wrap:nowrap}}
+@media(max-width:767px){.fluentform .ff-t-container{gap:0!important;flex-direction:column}.fluentform .ff-t-container .ff-t-cell{width:100%!important;flex-basis:100%!important}}
