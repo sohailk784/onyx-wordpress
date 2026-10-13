@@ -1,0 +1,110 @@
+{
+ "home": {
+  "slug": "home",
+  "title": "Home",
+  "file": "home.json",
+  "notes": []
+ },
+ "what-are-peptides": {
+  "slug": "what-are-peptides",
+  "title": "What Are Peptides?",
+  "file": "what-are-peptides.json",
+  "notes": []
+ },
+ "faq": {
+  "slug": "faq",
+  "title": "FAQ",
+  "file": "faq.json",
+  "notes": []
+ },
+ "payment-delivery": {
+  "slug": "payment-delivery",
+  "title": "Payment & Delivery",
+  "file": "payment-delivery.json",
+  "notes": []
+ },
+ "product-returns": {
+  "slug": "product-returns",
+  "title": "Product Returns",
+  "file": "product-returns.json",
+  "notes": []
+ },
+ "contact": {
+  "slug": "contact",
+  "title": "Contact",
+  "file": "contact.json",
+  "notes": []
+ },
+ "wholesale-application": {
+  "slug": "wholesale-application",
+  "title": "Wholesale Application",
+  "file": "wholesale-application.json",
+  "notes": []
+ },
+ "independent-doctor-consultation": {
+  "slug": "independent-doctor-consultation",
+  "title": "Independent Doctor Consultation",
+  "file": "independent-doctor-consultation.json",
+  "notes": []
+ },
+ "terms-conditions": {
+  "slug": "terms-conditions",
+  "title": "Terms & Conditions",
+  "file": "terms-conditions.json",
+  "notes": []
+ },
+ "privacy-policy": {
+  "slug": "privacy-policy",
+  "title": "Privacy Policy",
+  "file": "privacy-policy.json",
+  "notes": []
+ },
+ "refund-policy": {
+  "slug": "refund-policy",
+  "title": "Refund Policy",
+  "file": "refund-policy.json",
+  "notes": []
+ },
+ "shipping-policy": {
+  "slug": "shipping-policy",
+  "title": "Shipping Policy",
+  "file": "shipping-policy.json",
+  "notes": []
+ },
+ "cookies-policy": {
+  "slug": "cookies-policy",
+  "title": "Cookies Policy",
+  "file": "cookies-policy.json",
+  "notes": []
+ },
+ "accessibility-policy": {
+  "slug": "accessibility-policy",
+  "title": "Accessibility Policy",
+  "file": "accessibility-policy.json",
+  "notes": []
+ },
+ "product-catalogue": {
+  "slug": "product-catalogue",
+  "title": "Product Catalogue",
+  "file": "product-catalogue.json",
+  "notes": []
+ },
+ "check-code": {
+  "slug": "check-code",
+  "title": "Check Code",
+  "file": "check-code.json",
+  "notes": []
+ },
+ "analytical-reference-calculator": {
+  "slug": "analytical-reference-calculator",
+  "title": "Analytical Reference Calculator",
+  "file": "analytical-reference-calculator.json",
+  "notes": []
+ },
+ "peptide-plans": {
+  "slug": "peptide-plans",
+  "title": "Peptide Plans",
+  "file": "peptide-plans.json",
+  "notes": []
+ }
+}
