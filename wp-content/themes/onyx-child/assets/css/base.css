@@ -1,0 +1,66 @@
+/* Base layer: typography, links, buttons, forms. */
+html { scroll-behavior: smooth; }
+body {
+	background: var(--onyx-background);
+	color: var(--onyx-foreground);
+	font-family: var(--onyx-font-sans);
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 { color: inherit; font-family: var(--onyx-font-sans); margin-block: 0; }
+a { color: var(--onyx-accent); }
+a:hover { color: var(--onyx-primary); }
+.elementor-widget-text-editor p:last-child { margin-bottom: 0; }
+.elementor-widget-text-editor p { margin-block-end: 0; }
+
+/* Hello Elementor resets */
+.site-main, .page-content { max-width: none; }
+body:not(.elementor-page) .site-main { max-width: var(--onyx-container); margin-inline: auto; padding: 2.5rem 1rem 4rem; }
+
+button, .button, input[type="submit"], .elementor-button {
+	font-family: var(--onyx-font-sans);
+	transition: background-color .2s, color .2s, box-shadow .2s;
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], input[type="search"], select, textarea {
+	border: 1px solid var(--onyx-border);
+	border-radius: calc(var(--onyx-radius) - 2px);
+	background: #fff;
+	padding: .65rem .9rem;
+	font-size: .875rem;
+	color: var(--onyx-foreground);
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--onyx-accent); box-shadow: 0 0 0 3px rgba(40, 133, 239, .15); }
+
+/* Utility classes usable from Elementor (Advanced → CSS Classes) */
+.onyx-container { max-width: var(--onyx-container); margin-inline: auto; padding-inline: 1rem; }
+.onyx-badge-pill { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; border: 1px solid rgba(40,133,239,.3); background: rgba(40,133,239,.1); color: var(--onyx-accent); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .8rem; }
+.onyx-card { background: var(--onyx-card); border: 1px solid var(--onyx-border); border-radius: var(--onyx-radius-lg); padding: 1.25rem; }
+.onyx-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
+.onyx-cards .onyx-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+.onyx-cards .onyx-card p { color: var(--onyx-muted-foreground); font-size: .875rem; margin: 0; }
+.onyx-profile { width: 100%; border: 1px solid var(--onyx-border); border-radius: var(--onyx-radius-lg); border-collapse: separate; border-spacing: 0; overflow: hidden; background: #fff; margin-bottom: 2rem; }
+.onyx-profile th, .onyx-profile td { padding: .85rem 1.25rem; border-bottom: 1px solid var(--onyx-border); text-align: left; font-size: .875rem; vertical-align: top; }
+.onyx-profile tr:last-child th, .onyx-profile tr:last-child td { border-bottom: 0; }
+.onyx-profile th { width: 30%; font-weight: 700; background: transparent; }
+.onyx-profile td { color: var(--onyx-muted-foreground); }
+.onyx-ruo { border: 1px solid #fde68a; background: #fffbeb; color: #78350f; border-radius: var(--onyx-radius); padding: .75rem 1rem; font-size: .8rem; }
+details.onyx-faq { border: 1px solid var(--onyx-border); border-radius: var(--onyx-radius-lg); background: #fff; margin-bottom: .75rem; }
+details.onyx-faq summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 600; font-size: .9rem; }
+details.onyx-faq p { padding: 0 1.25rem 1.25rem; color: var(--onyx-muted-foreground); font-size: .875rem; margin: 0; }
+
+/* Header/Footer Builder (EHF) nav menu */
+.hfe-nav-menu .menu-item a.hfe-menu-item { font-size: .8rem; font-weight: 600; color: var(--onyx-foreground); }
+.hfe-nav-menu .menu-item.current-menu-item > a.hfe-menu-item, .hfe-nav-menu .menu-item a.hfe-menu-item:hover { color: var(--onyx-accent); }
+.hfe-nav-menu .sub-menu { border-radius: var(--onyx-radius); border: 1px solid var(--onyx-border); box-shadow: 0 10px 30px rgba(4,13,30,.08); }
+
+/* Accessibility */
+.screen-reader-text:focus { clip: auto; height: auto; width: auto; }
+
+/* Sticky Elementor header (EHF). With Elementor Pro use the header template's Motion Effects → Sticky instead. */
+body.ehf-header #masthead { position: sticky; top: 0; z-index: 99; }
+.admin-bar.ehf-header #masthead { top: 32px; }
+.onyx-header .onyx-hicon:hover { background: rgba(255,255,255,.12); }
+.onyx-header .hfe-nav-menu__layout-horizontal .hfe-nav-menu > li.menu-item:not(:last-child)::after { content: ""; width: 1px; height: 16px; background: var(--onyx-border); align-self: center; }
+.onyx-header .hfe-cart-menu-wrap-default .hfe-cart-count { background: var(--onyx-accent); color: #fff; }
+.onyx-header .hfe-menu-cart__toggle .elementor-button { padding: 8px; background: transparent; }
+.onyx-header .hfe-menu-cart__toggle .elementor-button-text { display: none; }
