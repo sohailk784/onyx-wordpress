@@ -1,0 +1,33 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+wp-config.php
+# Content not owned by this repo
+/wp-content/*
+!/wp-content/themes/
+!/wp-content/plugins/
+/wp-content/themes/*
+!/wp-content/themes/onyx-child/
+/wp-content/plugins/*
+!/wp-content/plugins/onyx-core/
+!/wp-content/plugins/onyx-crypto-gateway/
+/wp-content/uploads/
+/wp-content/ai1wm-backups/
+/wp-content/mu-plugins/
+# Secrets, dumps, build artefacts
+.env
+.env.*
+*CREDENTIALS*
+*.sql
+*.sql.gz
+*.wpress
+build-work/
+node_modules/
+__pycache__/
+*.log
+.DS_Store
