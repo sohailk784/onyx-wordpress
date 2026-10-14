@@ -35,3 +35,21 @@ body.admin-bar .onyx-header.sticky { top: 32px; }
 body.onyx-cart-page .site-main, body.onyx-cart-page .page-content { max-width: none !important; padding: 0 !important; margin: 0 !important; }
 body.onyx-cart-page .woocommerce { max-width: none; }
 body.onyx-cart-page .woocommerce-notices-wrapper:empty { display: none; }
+
+/* Checkout (React Checkout.tsx parity) */
+body.onyx-checkout-page .woocommerce-form-coupon-toggle,body.onyx-checkout-page .woocommerce-form-login-toggle{display:none}
+.onyx-checkout .onyx-select{position:relative}
+.onyx-checkout .onyx-select-native{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;appearance:none;-webkit-appearance:none}
+.onyx-checkout .onyx-phone>div{position:relative}
+.onyx-checkout .onyx-sw15{stroke-width:1.5}
+.onyx-checkout input[type=radio],.onyx-checkout input[type=checkbox]{accent-color:auto;margin:0}
+.onyx-checkout .blockUI.blockOverlay{background:rgba(255,255,255,.6)!important}
+.onyx-checkout .onyx-co-errors ul{margin:0;padding:0;list-style:none}
+.onyx-checkout .onyx-co-errors .woocommerce-error{margin:0;padding:0;border:0;background:none;color:inherit;font-size:inherit}
+.onyx-checkout .onyx-co-errors .woocommerce-error::before{display:none}
+.onyx-checkout .onyx-co-errors li+li{margin-top:4px}
+.onyx-checkout .woocommerce-Price-amount{font:inherit;color:inherit}
+.onyx-tw.onyx-checkout input.px-4.py-3{padding:.75rem 1rem;line-height:1.25rem;height:auto;font-size:.875rem}
+.onyx-tw.onyx-checkout input.px-3.py-3[type=tel]{padding:.75rem;border:0;border-radius:0;background:transparent;box-shadow:none;line-height:1.25rem;height:auto;font-size:.875rem}
+.onyx-tw.onyx-checkout input.border-red-500{border-color:#ef4444}
+.onyx-checkout #payment{background:transparent;border-radius:0}

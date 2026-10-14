@@ -43,7 +43,7 @@ class Onyx_Payment_Proof {
 		if ( 'onyx_crypto' !== $order->get_payment_method() ) {
 			return;
 		}
-		$done = $order->get_meta( '_onyx_proof_file' );
+		$done = $order->get_meta( '_onyx_proof_file' ) || $order->get_meta( '_onyx_proof_txid' );
 		if ( isset( $_GET['proof'] ) && 'ok' === $_GET['proof'] ) { // phpcs:ignore WordPress.Security.NonceVerification
 			echo '<div class="woocommerce-message">' . esc_html__( 'Thank you – your payment proof was received. We will verify it shortly.', 'onyx-crypto' ) . '</div>';
 		}
@@ -58,7 +58,7 @@ class Onyx_Payment_Proof {
 				<input type="hidden" name="onyx_proof_order" value="<?php echo esc_attr( $order->get_id() ); ?>">
 				<input type="hidden" name="onyx_proof_key" value="<?php echo esc_attr( $order->get_order_key() ); ?>">
 				<p><label><?php esc_html_e( 'Transaction hash (TXID)', 'onyx-crypto' ); ?><br><input type="text" name="onyx_proof_txid" style="width:100%" maxlength="200"></label></p>
-				<p><label><?php esc_html_e( 'Screenshot or PDF (max 5 MB)', 'onyx-crypto' ); ?><br><input type="file" name="onyx_proof_file" accept=".jpg,.jpeg,.png,.webp,.pdf" required></label></p>
+				<p><label><?php esc_html_e( 'Screenshot or PDF (max 5 MB)', 'onyx-crypto' ); ?><br><input type="file" name="onyx_proof_file" accept=".jpg,.jpeg,.png,.webp,.pdf"></label></p>
 				<button type="submit" class="button alt"><?php esc_html_e( 'Submit proof', 'onyx-crypto' ); ?></button>
 			</form>
 		</section>
@@ -77,37 +77,42 @@ class Onyx_Payment_Proof {
 			wc_add_notice( __( 'Could not verify the upload request.', 'onyx-crypto' ), 'error' );
 			return;
 		}
-		if ( empty( $_FILES['onyx_proof_file']['tmp_name'] ) || ! is_uploaded_file( $_FILES['onyx_proof_file']['tmp_name'] ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-			wc_add_notice( __( 'Please choose a file.', 'onyx-crypto' ), 'error' );
+		$txid     = isset( $_POST['onyx_proof_txid'] ) ? sanitize_text_field( wp_unslash( $_POST['onyx_proof_txid'] ) ) : '';
+		$has_file = ! empty( $_FILES['onyx_proof_file']['tmp_name'] ) && is_uploaded_file( $_FILES['onyx_proof_file']['tmp_name'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( ! $has_file && '' === $txid ) {
+			wc_add_notice( __( 'Enter a transaction hash or upload a receipt.', 'onyx-crypto' ), 'error' );
 			return;
 		}
-		$file = $_FILES['onyx_proof_file']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-		if ( $file['size'] > self::MAX_BYTES ) {
-			wc_add_notice( __( 'File is larger than 5 MB.', 'onyx-crypto' ), 'error' );
-			return;
+		$name = (string) $order->get_meta( '_onyx_proof_file' );
+		if ( $has_file ) {
+			$file = $_FILES['onyx_proof_file']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+			if ( $file['size'] > self::MAX_BYTES ) {
+				wc_add_notice( __( 'File is larger than 5 MB.', 'onyx-crypto' ), 'error' );
+				return;
+			}
+			$allowed = array(
+				'jpg|jpeg' => 'image/jpeg',
+				'png'      => 'image/png',
+				'webp'     => 'image/webp',
+				'pdf'      => 'application/pdf',
+			);
+			$check = wp_check_filetype_and_ext( $file['tmp_name'], $file['name'], $allowed );
+			if ( empty( $check['ext'] ) ) {
+				wc_add_notice( __( 'Only JPG, PNG, WEBP or PDF files are accepted.', 'onyx-crypto' ), 'error' );
+				return;
+			}
+			$name = 'order-' . $order_id . '-' . wp_generate_password( 20, false ) . '.' . $check['ext'];
+			if ( ! move_uploaded_file( $file['tmp_name'], self::dir() . '/' . $name ) ) {
+				wc_add_notice( __( 'Upload failed, please try again.', 'onyx-crypto' ), 'error' );
+				return;
+			}
 		}
-		$allowed = array(
-			'jpg|jpeg' => 'image/jpeg',
-			'png'      => 'image/png',
-			'webp'     => 'image/webp',
-			'pdf'      => 'application/pdf',
-		);
-		$check = wp_check_filetype_and_ext( $file['tmp_name'], $file['name'], $allowed );
-		if ( empty( $check['ext'] ) ) {
-			wc_add_notice( __( 'Only JPG, PNG, WEBP or PDF files are accepted.', 'onyx-crypto' ), 'error' );
-			return;
-		}
-		$name = 'order-' . $order_id . '-' . wp_generate_password( 20, false ) . '.' . $check['ext'];
-		if ( ! move_uploaded_file( $file['tmp_name'], self::dir() . '/' . $name ) ) {
-			wc_add_notice( __( 'Upload failed, please try again.', 'onyx-crypto' ), 'error' );
-			return;
-		}
-		$txid = isset( $_POST['onyx_proof_txid'] ) ? sanitize_text_field( wp_unslash( $_POST['onyx_proof_txid'] ) ) : '';
+		$order->update_meta_data( '_onyx_proof_submitted', time() );
 		$order->update_meta_data( '_onyx_proof_file', $name );
 		$order->update_meta_data( '_onyx_proof_txid', $txid );
 		$order->add_order_note( sprintf( __( 'Customer uploaded payment proof. TXID: %s', 'onyx-crypto' ), $txid ? $txid : '—' ) );
 		$order->save();
-		wp_safe_redirect( add_query_arg( 'proof', 'ok', wp_get_referer() ? wp_get_referer() : $order->get_view_order_url() ) );
+		wp_safe_redirect( add_query_arg( 'proof', 'ok', wp_get_referer() ? wp_get_referer() : $order->get_checkout_order_received_url() ) );
 		exit;
 	}
 

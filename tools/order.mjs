@@ -1,0 +1,24 @@
+// Local only: place one guest crypto order, screenshot thank-you, upload proof.
+import { chromium } from 'playwright-core';
+const H='http://localhost:8088';
+const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});
+const ctx=await b.newContext({viewport:{width:1440,height:900}});await ctx.addCookies([{name:'onyx_age_verified',value:'1',domain:'localhost',path:'/'}]);await ctx.addInitScript(()=>{try{localStorage.setItem('ageVerified','true');localStorage.setItem('cookieConsent','accepted')}catch(e){}});const p=await ctx.newPage();
+await p.goto(H+'/product/rt/',{timeout:60000});await p.waitForTimeout(2000);await p.getByRole('button',{name:/^add to cart$/i}).first().click();await p.waitForTimeout(3000);
+await p.goto(H+'/checkout/');await p.waitForTimeout(2500);
+await p.fill('#billing_email','qa-test@example.com');await p.fill('#billing_first_name','QA');await p.fill('#billing_last_name','Test');
+await p.fill('#billing_address_1','1 Test St');await p.fill('#billing_city','London');await p.fill('#billing_postcode','SW1A 1AA');
+await p.fill('#onyx_phone_national','7911 123456');
+await p.locator('label.onyx-opt:has-text("TRC20") input').check();await p.check('#onyx_terms');
+await p.waitForTimeout(2500);
+await p.click('#place_order');
+await p.waitForURL(/order-received/,{timeout:30000});await p.waitForTimeout(2000);
+console.log(p.url());
+await p.screenshot({path:'../cmp/ty-1440-local.png',fullPage:true});
+await p.setViewportSize({width:390,height:844});await p.waitForTimeout(800);
+await p.screenshot({path:'../cmp/ty-390-local.png',fullPage:true});
+await p.setViewportSize({width:1440,height:900});
+await p.fill('#onyx_proof_txid','0xTESTHASH123');await p.setInputFiles('input[name=onyx_proof_file]','/tmp/receipt.png');
+await Promise.all([p.waitForNavigation(),p.click('.onyx-proof-form button[type=submit]')]);await p.waitForTimeout(1500);
+console.log(p.url());
+await p.screenshot({path:'../cmp/ty-pending-1440-local.png',fullPage:true});
+await b.close();

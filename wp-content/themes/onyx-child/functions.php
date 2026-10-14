@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'ONYX_CHILD_VERSION', '1.2.0' );
+define( 'ONYX_CHILD_VERSION', '1.3.0' );
 
 add_action( 'wp_enqueue_scripts', function () {
 	$dir = get_stylesheet_directory_uri();
@@ -50,3 +50,4 @@ add_action( 'wp_head', function () {
 
 require_once __DIR__ . '/inc/ui.php';
 require_once __DIR__ . '/inc/woocommerce.php';
+require_once __DIR__ . '/inc/checkout.php';
