@@ -21,21 +21,14 @@ def SEC(cls,kids,**s): return C('hv2-sec '+cls,[C('hv2-wrap',kids)],inner=False,
 
 
 ANIM=lambda d=0: {'_animation':'fadeInUp','animation':'fadeInUp','animation_duration':'fast','_animation_delay':d,'animation_delay':d}
-hero=SEC('hv2-hero',[C('hv2-hero-grid',[
-  C('hv2-hero-copy',[
-    T('<span class="hv2-pill"><i></i>Third-party tested · HPLC &amp; LC-MS</span>'),
-    H('Research-grade peptides.<br><span>Proven, batch by batch.</span>','h1','hv2-h1'),
-    T('<p>Independently tested for identity and purity, with a certificate of analysis for every product line. Supplied exclusively for laboratory research.</p>','hv2-hero-p'),
-    C('hv2-ctas',[B('Shop research peptides','/peptides/','hv2-btn hv2-btn-arrow'),B('Verify a batch code','/check-code/','hv2-btn hv2-btn-ghost')],'row'),
-    LIST(['≥99% reported purity','COA for every product line','Made in the U.K. &amp; EU'],'hv2-checks')]),
-  C('hv2-stage',[
-    W('html','hv2-stage-art',html=f"""<div class="hv2-panel">
- <a class="hv2-pen hv2-pen-l" href="{BASE}/product/semadualpen/"><img loading="eager" src="{U}onyx-home-v2/pen-sema.png" width="141" height="1261" alt="Sema Dual Chamber Pen"></a>
- <a class="hv2-pen hv2-pen-c" href="{BASE}/product/bpctbdualpen/"><img loading="eager" src="{U}onyx-home-v2/pen-bpc-tb.png" width="132" height="1262" alt="BPC + TB Dual Chamber Pen"></a>
- <a class="hv2-pen hv2-pen-r" href="{BASE}/product/ghkcudualpen/"><img loading="eager" src="{U}onyx-home-v2/pen-ghk.png" width="131" height="1285" alt="GHK(Cu) Dual Chamber Pen"></a>
-</div>
-<a class="hv2-float hv2-f1" href="{BASE}/product/bpctbdualpen/"><span class="hv2-f-k">Bestseller</span><b>BPC + TB | Dual Chamber Pen</b><small>From £116.00</small></a>
-<div class="hv2-float hv2-f2"><span class="hv2-f-ic">✓</span><div><b>Certificate of Analysis</b><small>Purity (HPLC) spec ≥99.0%</small></div></div>""")])],'row')])
+hero=C('hv2-sec hv2-hero2',[
+  C('hv2-hero2-copy',[
+    T('<p class="hv2-hero2-trust"><span class="hv2-dots"><i></i><i></i><i></i></span>Third-party tested · HPLC &amp; LC-MS · ≥99% reported purity</p>'),
+    H('Research-grade peptides, <br>verified batch by batch','h1','hv2-h1-light'),
+    T('<p>Independently tested for identity and purity, with a certificate of analysis for every product line.</p>','hv2-hero2-sub'),
+    C('hv2-hero2-ctas',[B('Shop research peptides','/peptides/','hv2-btn hv2-btn-pill hv2-btn-arrow'),B('Verify a batch code','/check-code/','hv2-btn hv2-btn-link')],'row')]),
+  W('html','hv2-hero2-art',html=f'<div class="hv2-art"><img loading="eager" fetchpriority="high" src="{U}onyx-home-v2/hero-composite.webp" width="1800" height="1400" alt="ONYX dual chamber peptide pens and boxes: Semaglutide, BPC-157 + TB-500, GHK-Cu, SS31 + MOTS-c, Glutathione, Cardiogen"></div>')
+ ],'row',inner=False)
 
 trust=SEC('hv2-trust',[C('hv2-trust-grid',[
   ICONB('fas fa-shipping-fast','Fast EU dispatch','Shipped within 24 hours'),

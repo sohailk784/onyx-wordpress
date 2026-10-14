@@ -1,6 +1,6 @@
 import {chromium} from 'playwright-core';
 const b=await chromium.launch({executablePath:'/usr/bin/google-chrome'});
-for (const [w,sel,name] of [[1440,'.hv2-hero','hero'],[1440,'.hv2-best','bestsellers'],[1440,'.hv2-testing','how-we-test'],[1440,'.hv2-lab','video'],[390,'.hv2-hero','hero-mobile'],[390,'.hv2-best','bestsellers-mobile']]){
+for (const [w,sel,name] of [[1440,'.hv2-hero2','hero'],[1440,'.hv2-best','bestsellers'],[1440,'.hv2-testing','how-we-test'],[1440,'.hv2-lab','video'],[390,'.hv2-hero2','hero-mobile'],[390,'.hv2-best','bestsellers-mobile']]){
  const p=await b.newPage({viewport:{width:w,height:900},deviceScaleFactor:2});
  await p.goto('http://localhost:8088/home-v2/',{waitUntil:'networkidle'});
  for(const t of ['Over 21']){const l=p.getByRole('button',{name:new RegExp(t,'i')}).first();if(await l.isVisible().catch(()=>false))await l.click();}
