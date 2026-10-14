@@ -53,3 +53,33 @@ body.onyx-checkout-page .woocommerce-form-coupon-toggle,body.onyx-checkout-page 
 .onyx-tw.onyx-checkout input.px-3.py-3[type=tel]{padding:.75rem;border:0;border-radius:0;background:transparent;box-shadow:none;line-height:1.25rem;height:auto;font-size:.875rem}
 .onyx-tw.onyx-checkout input.border-red-500{border-color:#ef4444}
 .onyx-checkout #payment{background:transparent;border-radius:0}
+
+/* Account / B2B login / wishlist (React Auth.tsx, BusinessAuth.tsx, Profile.tsx, Wishlist.tsx parity) */
+.onyx-auth form.login,.onyx-auth form.register{border:0!important;padding:0!important;margin:0!important;border-radius:0!important;text-align:left}
+.onyx-auth form.login>*+*,.onyx-auth form.register>*+*{margin-top:1.25rem}
+.onyx-auth input[type=email],.onyx-auth input[type=password],.onyx-auth input[type=text]{width:100%;border:1px solid var(--border);border-radius:.5rem;background:var(--background);padding:.75rem 1rem .75rem 2.5rem;font-size:.875rem;line-height:1.25rem;box-shadow:none;outline:none;height:auto;margin:0}
+.onyx-auth input[type=email]:focus,.onyx-auth input[type=password]:focus{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in oklab,var(--accent) 20%,transparent)}
+.onyx-auth input[type=checkbox]{margin:0}
+.onyx-auth .show-password-input{display:none}
+.onyx-auth .text-red-600 a{color:inherit;text-decoration:underline}
+body.onyx-account-page .woocommerce-notices-wrapper{max-width:28rem;margin:1rem auto 0;padding:0 1rem}
+body.onyx-account-page .onyx-profile .woocommerce-notices-wrapper{max-width:none;padding:0;margin:0 0 1rem}
+.onyx-profile .woocommerce-MyAccount-content{float:none;width:auto}
+.onyx-profile .woocommerce-Addresses{display:grid;gap:1rem}
+@media(min-width:640px){.onyx-profile .woocommerce-Addresses{grid-template-columns:1fr 1fr}}
+.onyx-profile .woocommerce-Addresses .woocommerce-Address,.onyx-profile form.edit-account,.onyx-profile .woocommerce-address-fields{border:1px solid var(--border);border-radius:.75rem;background:var(--card);padding:1.25rem;width:auto!important;float:none!important}
+.onyx-profile .woocommerce-Address-title{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.onyx-profile .woocommerce-Address-title h2{font-size:1rem;font-weight:700;margin:0}
+.onyx-profile .woocommerce-Address-title a{font-size:.75rem;font-weight:600;color:var(--accent)}
+.onyx-profile address{margin-top:.5rem;font-size:.875rem;font-style:normal;color:var(--muted-foreground)}
+.onyx-profile .woocommerce-MyAccount-content>p:first-child{font-size:.875rem;color:var(--muted-foreground);margin-bottom:1rem}
+.onyx-profile input.input-text,.onyx-profile select{border:1px solid var(--border);border-radius:.375rem;background:var(--background);padding:.65rem 1rem;font-size:.875rem;width:100%}
+.onyx-profile label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--muted-foreground)}
+.onyx-profile button.button,.onyx-profile .woocommerce-Button{border-radius:.375rem;background:var(--primary);color:var(--primary-foreground);padding:.625rem 1.25rem;font-size:.875rem;font-weight:700;border:0}
+.onyx-wishlist .tinvwl-table-manage-list{display:none}
+.onyx-tw .onyx-wish:has(.tinvwl-product-in-list) svg{fill:#2563eb;color:#2563eb}
+.onyx-profile .woocommerce-Addresses::before,.onyx-profile .woocommerce-Addresses::after{display:none!important;content:none!important}
+.onyx-profile .woocommerce-Addresses>.woocommerce-Address{max-width:none!important;margin:0!important}
+.onyx-profile .woocommerce-Address-title::before,.onyx-profile .woocommerce-Address-title::after{display:none!important}
+.onyx-profile .woocommerce-Address-title h2{text-align:left;flex:1}
+.onyx-profile .woocommerce-Address-title a{float:none!important;margin-left:auto}
