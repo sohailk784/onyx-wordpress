@@ -1,0 +1,16 @@
+import json,sys
+opt=sys.argv[1]; out=sys.argv[2]
+I={'truck':'<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+'flask':'<path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.13a2 2 0 0 1-.21-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>',
+'badge':'<path d="M12 2l2.4 1.8 3 .2.9 2.9 2.3 1.9-.9 2.9.9 2.9-2.3 1.9-.9 2.9-3 .2L12 22l-2.4-1.8-3-.2-.9-2.9-2.3-1.9.9-2.9-.9-2.9 2.3-1.9.9-2.9 3-.2z"/><path d="m9 12 2 2 4-4"/>',
+'file':'<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/>',
+'scan':'<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8v8M10.5 8v8M14 8v8M17 8v8"/>',
+'factory':'<path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/>'}
+items=[('truck','24h dispatch','Shipped within 24 hours'),('flask','Third-party tested','<span class="nw">HPLC &amp; LC-MS</span> analysis'),
+('badge','≥99% purity','Third-party reported'),('file','COA per batch','Certificate of analysis'),('scan','Authenticity codes','Verify packs online'),('factory','UK &amp; EU made','Certified facilities')]
+li=''.join(f'<li class="hv2-tr-item"><span class="hv2-tr-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{I[i]}</svg></span><span class="hv2-tr-tx"><strong>{t}</strong><span>{d}</span></span></li>' for i,t,d in items)
+html=f'<div class="hv2-tr-in"><ul class="hv2-tr-list" aria-label="Why researchers choose ONYX">{li}</ul></div>'
+cls=f'hv2-sec hv2-tr hv2-tr-{opt}'; pad={'unit':'px','top':'0','right':'0','bottom':'0','left':'0','isLinked':True}
+sec={'id':f'b5e{opt}101','elType':'container','isInner':False,'settings':{'content_width':'full','flex_direction':'column','_css_classes':cls,'css_classes':cls,'padding':pad,'flex_gap':{'unit':'px','size':0,'column':'0','row':'0','isLinked':True}},
+'elements':[{'id':f'b5e{opt}102','elType':'widget','widgetType':'html','settings':{'_css_classes':'hv2-tr-w','html':html},'elements':[]}]}
+json.dump(sec,open(out,'w'))
