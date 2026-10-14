@@ -56,3 +56,8 @@ require_once __DIR__ . '/inc/ui.php';
 require_once __DIR__ . '/inc/woocommerce.php';
 require_once __DIR__ . '/inc/checkout.php';
 require_once __DIR__ . '/inc/account.php';
+
+// Home V2: crisp product images in the bestseller grid (full-width source instead of the 300px thumbnail).
+add_filter( 'single_product_archive_thumbnail_size', function ( $size ) {
+	return is_page( 'home-v2' ) ? 'woocommerce_single' : $size;
+} );
