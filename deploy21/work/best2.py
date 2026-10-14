@@ -11,4 +11,6 @@ function upd(){var st=step(),max=ul.scrollWidth-ul.clientWidth,n=max>2?Math.ceil
 pv.addEventListener('click',function(){ul.scrollBy({left:-step(),behavior:'smooth'});});nx.addEventListener('click',function(){ul.scrollBy({left:step(),behavior:'smooth'});});
 ul.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});window.addEventListener('resize',upd);upd();})();</script>'''
 kids.insert(i+1,{'id':'d5b2a01','elType':'widget','widgetType':'html','settings':{'_css_classes':'hv2-b2-pagerw','html':pager},'elements':[]})
+# drop the 'Research use only' note from this section (research-use line removed per user)
+wrap['elements']=[e for e in wrap['elements'] if 'research use only' not in json.dumps(e).lower()]
 json.dump(b,open(out,'w'))
