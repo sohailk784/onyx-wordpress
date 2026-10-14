@@ -27,7 +27,7 @@ hero=C('hv2-sec hv2-hero2',[
     H('Research-grade peptides, <br>verified batch by batch','h1','hv2-h1-light'),
     T('<p>Independently tested for identity and purity, with a certificate of analysis for every product line.</p>','hv2-hero2-sub'),
     C('hv2-hero2-ctas',[B('Shop research peptides','/peptides/','hv2-btn hv2-btn-pill hv2-btn-arrow'),B('Verify a batch code','/check-code/','hv2-btn hv2-btn-link')],'row')]),
-  W('html','hv2-hero2-art',html=f'<div class="hv2-art"><img loading="eager" fetchpriority="high" src="{U}onyx-home-v2/hero-composite-v2.webp" width="1800" height="1400" alt="ONYX dual chamber peptide pens and boxes: Semaglutide, BPC-157 + TB-500, GHK-Cu, SS31 + MOTS-c, Glutathione, Cardiogen"></div>')
+  W('html','hv2-hero2-art',html=f'<div class="hv2-art"><picture><source type="image/webp" srcset="{U}onyx-home-v2/hero-pens-v3.webp"><img loading="eager" fetchpriority="high" src="{U}onyx-home-v2/hero-pens-v3.png" width="1600" height="1240" alt="ONYX dual chamber peptide pens: HCG, Semaglutide, BPC-157 + TB-500, GHK-Cu, HGH Fragment 176-191"></picture></div>')
  ],'row',inner=False)
 
 trust=SEC('hv2-trust',[C('hv2-trust-grid',[
