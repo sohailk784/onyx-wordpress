@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="720" viewBox="0 0 100 180">
+ <defs>
+  <linearGradient id="hub" x1="0" x2="1">
+   <stop offset="0" stop-color="#b9c3d1"/><stop offset=".18" stop-color="#e9eef5"/><stop offset=".42" stop-color="#ffffff"/>
+   <stop offset=".62" stop-color="#eef2f7"/><stop offset=".86" stop-color="#cfd7e2"/><stop offset="1" stop-color="#aab5c4"/></linearGradient>
+  <linearGradient id="hubv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".12" stop-color="#fff" stop-opacity="0"/><stop offset=".9" stop-color="#7d8aa0" stop-opacity="0"/><stop offset="1" stop-color="#7d8aa0" stop-opacity=".25"/></linearGradient>
+  <linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#5f6772"/><stop offset=".35" stop-color="#d9dee4"/><stop offset=".5" stop-color="#ffffff"/><stop offset=".7" stop-color="#a7afb9"/><stop offset="1" stop-color="#5a626d"/></linearGradient>
+  <clipPath id="hc"><rect x="10" y="0" width="80" height="64" rx="7"/></clipPath>
+ </defs>
+ <!-- hub body (frosted polypropylene, ribbed grip) -->
+ <rect x="10" y="0" width="80" height="64" rx="7" fill="url(#hub)"/>
+ <g clip-path="url(#hc)" stroke="#8796ab" stroke-opacity=".28" stroke-width=".9">
+  <path d="M16 6V58M22 4V60M28 4V60M34 4V60M40 4V60M46 4V60M52 4V60M58 4V60M64 4V60M70 4V60M76 4V60M82 4V60"/></g>
+ <rect x="10" y="0" width="80" height="64" rx="7" fill="url(#hubv)"/>
+ <rect x="10.5" y="0.5" width="79" height="63" rx="6.5" fill="none" stroke="#8b98ad" stroke-opacity=".55"/>
+ <rect x="12" y="2" width="76" height="5" rx="2.5" fill="#fff" fill-opacity=".6"/>
+ <!-- shoulder taper -->
+ <path d="M14 64 H86 C84 72 74 78 66 80 H34 C26 78 16 72 14 64Z" fill="url(#hub)" stroke="#8b98ad" stroke-opacity=".5" stroke-width=".8"/>
+ <!-- nose -->
+ <path d="M35 80 H65 V92 C65 96 60 100 55 101 H45 C40 100 35 96 35 92Z" fill="url(#hub)" stroke="#8b98ad" stroke-opacity=".5" stroke-width=".8"/>
+ <rect x="37" y="81" width="5" height="12" rx="2" fill="#fff" fill-opacity=".7"/>
+ <!-- cannula with bevelled point -->
+ <path d="M48.4 99 H51.6 V166 L50 173 L48.4 168Z" fill="url(#steel)"/>
+ <path d="M51.6 166 L50 173 L48.4 168 Z" fill="#eef1f4"/>
+</svg>
