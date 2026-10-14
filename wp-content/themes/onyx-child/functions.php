@@ -24,6 +24,10 @@ add_action( 'wp_enqueue_scripts', function () {
 	if ( function_exists( 'is_product' ) && is_product() ) {
 		wp_enqueue_script( 'onyx-product', $dir . '/assets/js/onyx-product.js', array(), ONYX_CHILD_VERSION, true );
 	}
+	// Home V2 (Elementor page, slug home-v2): section styling hooked to hv2-* CSS classes.
+	if ( is_page( 'home-v2' ) ) {
+		wp_enqueue_style( 'onyx-home-v2', $dir . '/assets/css/home-v2.css', array( 'onyx-tw-fixes', 'onyx-fluent-skin' ), ONYX_CHILD_VERSION );
+	}
 	wp_enqueue_script( 'onyx-theme', $dir . '/assets/js/theme.js', array(), ONYX_CHILD_VERSION, true );
 }, 20 );
 
