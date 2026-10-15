@@ -118,3 +118,7 @@ body.page-template-elementor_header_footer:has(.s2){background:#f7f5f0}
 @media(max-width:767px){.s2-bar-in{display:block}.s2-bar-in>.s2-filters,.s2-bar-in>.s2-sort{margin-top:14px}}
 .s2-mobile-filter,.s2-bar-in{width:100%}.s2-mobile-filter{min-width:0}
 @media(min-width:768px){.s2-sort{margin-left:auto}}
+/* deploy27b: one cool studio backdrop for every card so original photos sit with the premium (light-blue) images */
+.s2-media,.s2-premium .s2-media{background:radial-gradient(75% 65% at 50% 38%,#f7fafd 0,#e8f0f8 55%,#d8e4f1 100%)}
+.s2-card:not(.s2-premium) .s2-media img{padding:22px;filter:saturate(1.02) contrast(1.02)}
+.s2-premium .s2-media img{transform:scale(1.001)}

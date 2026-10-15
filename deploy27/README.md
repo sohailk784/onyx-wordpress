@@ -19,3 +19,10 @@ Files:
   - before-peptides-desktop@2x.png (+ -top)
   - after-peptides2-{desktop,mobile}-partN@2x.png
   - after-peptides2-filtered-pens-* (example: Dual Chamber Pens, price low→high)
+
+## Update (Oct 15, 9:40 PM PKT): premium images, batch 1
+- chatgpt-out2 has 57 PNGs (the _rejected/ folder is ignored). 63 of 116 products now use premium images on Peptides 2: these 57 plus the 6 earlier ones. The other 53 keep their originals.
+- Every card now uses one cool light-blue studio backdrop, so original photos (multiplied onto it) sit consistently next to the premium images. Previously the originals were on a warm beige backdrop.
+- The zip was rebuilt and re-verified: 216 files, all custom references present (see work/zip-check.txt).
+- Mixed-grid spot checks: after-p2-page4-mixed-*, after-p2-page7-mixed-*.
+- When more images arrive: run homev2/make27.sh again.
