@@ -1,0 +1,124 @@
+
+/* ===================================================================================
+   deploy22: Home V2 full-page restyle following globalpenpeptide.com's system
+   (system-ui type, 400-weight headings, black 40px-radius pills, flat #f2f2f2/#f3f3f3 surfaces,
+   hairline dividers, shadowed FAQ cards). ONYX brand touch: light-blue eyebrows/checks/bands.
+   Colours: #121212 ink/buttons, #242833 hover, #3f3f3f body, #6b6b6b muted, #d6d6d6 lines,
+   #f3f3f3 grey band, #f2f2f2 media, #48b51f green dots; ONYX #2a4f8f / #0f2a52 / #eef4fc.
+   =================================================================================== */
+.hv2-sec{--g-ink:#121212;--g-ink2:#242833;--g-body:#3f3f3f;--g-muted:#6b6b6b;--g-line:#d6d6d6;--g-grey:#f3f3f3;--g-media:#f2f2f2;--g-green:#48b51f;--o-blue:#2a4f8f;--o-navy:#0f2a52;--o-tint:#eef4fc;
+ font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif!important;color:var(--g-body)}
+.hv2-sec .elementor-widget-container,.hv2-sec p,.hv2-sec li,.hv2-sec a,.hv2-sec button,.hv2-sec input,.hv2-sec h1,.hv2-sec h2,.hv2-sec h3,.hv2-sec .elementor-heading-title,.hv2-sec .elementor-button{font-family:inherit!important}
+/* section rhythm: 1200px page width, ~88px vertical */
+.hv2-sec .hv2-wrap{max-width:1200px!important;margin:0 auto!important;padding:0 32px!important;box-sizing:border-box}
+.hv2-sec.hv2-testing,.hv2-sec.hv2-b2bsec,.hv2-sec.hv2-faqsec,.hv2-sec.hv2-best{padding:88px 0!important}
+.hv2-sec.hv2-newssec{padding:0 0 96px!important}
+/* headings: large, regular weight, ink */
+.hv2-sec h2.elementor-heading-title,.hv2-sec .hv2-l2-h{font-size:40px!important;font-weight:400!important;line-height:1.18!important;letter-spacing:-.015em!important;color:var(--g-ink)!important;margin:10px 0 16px!important}
+.hv2-sec h2 span{color:inherit!important}
+.hv2-sec h3.elementor-heading-title{font-weight:500!important;color:var(--g-ink)!important;letter-spacing:-.005em!important}
+.hv2-sec .hv2-lead,.hv2-sec .hv2-lead p{font-size:16px!important;line-height:1.65!important;color:var(--g-muted)!important}
+/* eyebrows: GPP-style small caps label, ONYX blue (lab keeps its approved orange) */
+.hv2-sec .hv2-eyebrow .elementor-heading-title{font-size:12px!important;font-weight:700!important;letter-spacing:.12em!important;color:var(--o-blue)!important;gap:0!important}
+.hv2-sec .hv2-eyebrow .elementor-heading-title:before{display:none!important}
+/* buttons: black pill primary, outline pill secondary */
+.hv2-sec .hv2-btn .elementor-button{background:var(--g-ink)!important;color:#fff!important;border:1px solid var(--g-ink)!important;border-radius:40px!important;padding:14px 28px!important;font-size:14.5px!important;font-weight:500!important;letter-spacing:.01em;box-shadow:none!important;transition:background .25s,border-color .25s,color .25s,box-shadow .25s}
+.hv2-sec .hv2-btn .elementor-button:hover,.hv2-sec .hv2-btn .elementor-button:focus-visible{background:var(--g-ink2)!important;border-color:var(--g-ink2)!important;color:#fff!important;box-shadow:0 0 0 3px rgba(72,181,31,.35)!important;transform:none!important}
+.hv2-sec .hv2-btn-o .elementor-button,.hv2-sec .hv2-btn-ghost .elementor-button{background:#fff!important;color:var(--g-ink)!important;border:1px solid var(--g-ink)!important}
+.hv2-sec .hv2-btn-o .elementor-button:hover,.hv2-sec .hv2-btn-ghost .elementor-button:hover{background:var(--g-ink)!important;color:#fff!important;box-shadow:none!important}
+.hv2-sec .hv2-ctas{gap:12px!important}
+
+/* hero: GPP hero type (regular weight) */
+.hv2-sec.hv2-hero2 .hv2-h1-light .elementor-heading-title{font-weight:400!important;color:var(--g-ink)!important;letter-spacing:-.02em!important}
+.hv2-sec.hv2-hero2 .hv2-hero2-sub,.hv2-sec.hv2-hero2 .hv2-hero2-sub p{color:var(--g-muted)!important}
+/* logo marquee caption: GPP uses a bolder caption */
+.hv2-logos .hv2-lg-cap{color:var(--g-ink)!important;font-weight:500!important;font-size:16px!important}
+.hv2-sec.hv2-logos{background:var(--g-grey)!important}
+
+/* bestsellers: GPP collection header (regular heading, outline pill) */
+.hv2-sec.hv2-best .hv2-head{align-items:flex-end!important;margin-bottom:28px!important}
+.hv2-sec.hv2-best h2.elementor-heading-title{font-size:32px!important;margin-bottom:0!important}
+.hv2-sec.hv2-best .hv2-btn .elementor-button{background:#fff!important;color:var(--g-ink)!important;border:1px solid var(--g-ink)!important}
+.hv2-sec.hv2-best .hv2-btn .elementor-button:hover{background:var(--g-ink)!important;color:#fff!important}
+.hv2-sec.hv2-best2 .hv2-products li.product:before{display:none!important}
+.hv2-sec.hv2-best2 .hv2-products ul.products li.product .woocommerce-loop-product__title{font-size:13.5px!important;color:var(--g-ink)!important}
+
+/* testing: GPP "Easy to use" pattern = big regular heading + hairline rows; flat media card */
+.hv2-sec.hv2-testing{background:#fff!important}
+.hv2-sec.hv2-testing .hv2-split{gap:64px!important;align-items:center!important}
+.hv2-sec.hv2-testing .hv2-split>.elementor-widget-html .elementor-widget-container>*,.hv2-sec.hv2-testing .hv2-coa,.hv2-sec.hv2-testing [class*="coa"]{box-shadow:none!important}
+.hv2-sec.hv2-testing .elementor-widget-html>.elementor-widget-container>div{background:var(--g-media)!important;border:0!important;border-radius:14px!important;box-shadow:none!important}
+.hv2-sec.hv2-testing .hv2-steps{gap:0!important;margin-top:56px!important;border-top:1px solid var(--g-line);border-bottom:1px solid var(--g-line)}
+.hv2-sec.hv2-testing .hv2-step{background:transparent!important;border:0!important;border-radius:0!important;padding:26px 24px 28px!important;box-shadow:none!important;position:relative}
+.hv2-sec.hv2-testing .hv2-step+.hv2-step:before{content:"";position:absolute;left:0;top:26px;bottom:28px;width:1px;background:var(--g-line)}
+.hv2-sec.hv2-testing .hv2-step:first-child{padding-left:0!important}
+.hv2-sec.hv2-testing .hv2-step-n .elementor-heading-title{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--o-tint);color:var(--o-blue)!important;font-size:12px!important;font-weight:600!important;letter-spacing:0!important}
+.hv2-sec.hv2-testing .hv2-step h3.elementor-heading-title{font-size:19px!important;margin:14px 0 6px!important}
+.hv2-sec.hv2-testing .hv2-step p{font-size:14px!important;line-height:1.55;color:var(--g-muted)!important}
+
+/* B2B: GPP has no dark blocks -> light grey split card, ink text, ONYX-blue checks */
+.hv2-sec.hv2-b2bsec{background:var(--g-grey)!important}
+.hv2-sec .hv2-b2b{background:transparent!important;color:var(--g-ink)!important;border-radius:0!important;gap:56px!important;align-items:center!important}
+.hv2-sec .hv2-b2b-tx{padding:0!important}
+.hv2-sec .hv2-b2b h2{color:var(--g-ink)!important}
+.hv2-sec .hv2-b2b .hv2-lead p{color:var(--g-muted)!important}
+.hv2-sec .hv2-b2b .hv2-eyebrow .elementor-heading-title{color:var(--o-blue)!important}
+.hv2-sec .hv2-b2b-list{margin:6px 0 26px!important;border-top:1px solid var(--g-line)}
+.hv2-sec .hv2-b2b-list .elementor-icon-list-item{padding:13px 0!important;border-bottom:1px solid var(--g-line)}
+.hv2-sec .hv2-b2b-list .elementor-icon-list-text{color:var(--g-ink)!important;font-size:15px}
+.hv2-sec .hv2-b2b-list svg{fill:var(--g-green)!important}
+.hv2-sec .hv2-b2b-ph{border-radius:14px!important;overflow:hidden;min-height:440px!important}
+.hv2-sec .hv2-b2b .hv2-btn-ghost .elementor-button{background:transparent!important}
+
+/* FAQ: GPP pattern = big heading left, white shadowed cards with chevron on the right */
+.hv2-sec.hv2-faqsec{background:#fff!important}
+.hv2-sec .hv2-faq{gap:64px!important;align-items:start!important}
+.hv2-sec.hv2-faqsec h2.elementor-heading-title{font-size:44px!important}
+.hv2-sec .hv2-toggle .elementor-toggle{display:flex;flex-direction:column;gap:14px}
+.hv2-sec .hv2-toggle .elementor-toggle-item{background:#fff;border:0!important;border-radius:8px;box-shadow:0 2px 12px rgba(18,18,18,.08),0 0 0 1px rgba(18,18,18,.04);overflow:hidden}
+.hv2-sec .hv2-toggle .elementor-tab-title{display:flex!important;flex-direction:row-reverse;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px!important;font-weight:500!important;font-size:16px!important}
+.hv2-sec .hv2-toggle .elementor-tab-title a{color:var(--g-ink)!important}
+.hv2-sec .hv2-toggle .elementor-toggle-icon{width:18px!important;flex:none;color:var(--g-ink)!important;display:grid!important;place-items:center}
+.hv2-sec .hv2-toggle .elementor-toggle-icon svg{display:none!important}
+.hv2-sec .hv2-toggle .elementor-toggle-icon-closed:before,.hv2-sec .hv2-toggle .elementor-toggle-icon-opened:before{content:"";display:block;width:8px;height:8px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.hv2-sec .hv2-toggle .elementor-toggle-icon-opened:before{transform:translateY(2px) rotate(-135deg)}
+.hv2-sec .hv2-toggle .elementor-tab-content{padding:0 22px 20px!important;color:var(--g-muted)!important;font-size:15px;line-height:1.65}
+.hv2-sec .hv2-toggle .elementor-tab-content a{color:var(--o-blue)!important}
+
+/* newsletter: GPP "Subscribe" pattern on a faint ONYX-blue band */
+.hv2-sec .hv2-news{background:var(--o-tint)!important;border-radius:14px!important}
+.hv2-sec .hv2-news h2.elementor-heading-title{font-size:32px!important}
+.hv2-sec .hv2-newsform input.ff-el-form-control{height:50px!important;border:1px solid #c9d3e3!important;border-radius:6px!important;background:#fff!important;font-size:15px!important;box-shadow:none!important;padding:0 16px!important}
+.hv2-sec .hv2-newsform input.ff-el-form-control:focus{border-color:var(--g-ink)!important;outline:0}
+.hv2-sec .hv2-newsform button,.hv2-sec .hv2-newsform .ff-btn-submit{height:50px!important;background:var(--g-ink)!important;color:#fff!important;border:0!important;border-radius:40px!important;padding:0 28px!important;font-weight:500!important;box-shadow:none!important}
+.hv2-sec .hv2-newsform button:hover,.hv2-sec .hv2-newsform .ff-btn-submit:hover{background:var(--g-ink2)!important}
+
+@media(max-width:1024px) and (min-width:821px){.hv2-sec h2.elementor-heading-title,.hv2-sec .hv2-l2-h{font-size:34px!important}.hv2-sec.hv2-testing .hv2-steps{grid-template-columns:1fr 1fr!important}.hv2-sec.hv2-testing .hv2-step:nth-child(3):before{display:none}.hv2-sec.hv2-testing .hv2-step:nth-child(3){padding-left:0!important}}
+@media(max-width:820px){
+ .hv2-sec .hv2-wrap{padding:0 18px!important}
+ .hv2-sec.hv2-testing,.hv2-sec.hv2-b2bsec,.hv2-sec.hv2-faqsec,.hv2-sec.hv2-best{padding:56px 0!important}
+ .hv2-sec.hv2-newssec{padding:0 0 64px!important}
+ .hv2-sec h2.elementor-heading-title,.hv2-sec .hv2-l2-h,.hv2-sec.hv2-faqsec h2.elementor-heading-title{font-size:30px!important}
+ .hv2-sec.hv2-best h2.elementor-heading-title{font-size:28px!important}
+ .hv2-sec.hv2-best .hv2-head{align-items:flex-start!important}
+ .hv2-sec.hv2-testing .hv2-split{gap:32px!important}
+ .hv2-sec.hv2-testing .hv2-steps{grid-template-columns:1fr 1fr!important;margin-top:36px!important}
+ .hv2-sec.hv2-testing .hv2-step,.hv2-sec.hv2-testing .hv2-step:first-child{padding:20px 14px 22px 0!important}
+ .hv2-sec.hv2-testing .hv2-step:nth-child(2n){padding-left:14px!important}
+ .hv2-sec.hv2-testing .hv2-step:before{display:none}
+ .hv2-sec.hv2-testing .hv2-step:nth-child(-n+2){border-bottom:1px solid var(--g-line)}
+ .hv2-sec.hv2-testing .hv2-step:nth-child(2n){border-left:1px solid var(--g-line)}
+ .hv2-sec .hv2-b2b{gap:28px!important}
+ .hv2-sec .hv2-b2b-ph{min-height:240px!important}
+ .hv2-sec .hv2-faq{gap:24px!important}
+ .hv2-sec .hv2-toggle .elementor-tab-title{padding:16px 18px!important;font-size:15px!important}
+ .hv2-sec .hv2-news{padding:28px 22px!important}
+ .hv2-sec .hv2-news h2.elementor-heading-title{font-size:26px!important}
+}
+@media(prefers-reduced-motion:reduce){.hv2-sec .hv2-btn .elementor-button{transition:none}}
+.hv2-sec.hv2-lab2 .hv2-l2-h{font-size:34px!important}
+.hv2-sec .hv2-newsform fieldset{display:flex!important;gap:10px;align-items:flex-start;flex-wrap:nowrap}
+.hv2-sec .hv2-newsform fieldset>.ff-el-group:not(.ff_submit_btn_wrapper){flex:1 1 auto;margin:0!important}
+.hv2-sec .hv2-newsform .ff_submit_btn_wrapper{flex:none;margin:0!important}
+@media(max-width:820px){.hv2-sec.hv2-lab2 .hv2-l2-h{font-size:28px!important}.hv2-sec .hv2-newsform fieldset{flex-direction:column;align-items:stretch}.hv2-sec .hv2-newsform .ff_submit_btn_wrapper button{width:100%}}
+@media(max-width:820px){.hv2-sec .hv2-ctas{flex-direction:column!important;align-items:stretch!important}.hv2-sec .hv2-ctas>.elementor-widget{width:100%!important}.hv2-sec .hv2-ctas .elementor-button{width:100%!important;justify-content:center}}
