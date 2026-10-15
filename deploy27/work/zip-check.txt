@@ -1,0 +1,49 @@
+zip: /workspace/onyx/deploy27/onyx-peptides-2-deploy27-wp-content.zip
+files in zip: 45
+all custom refs in zip: True
+home-v2 refs not in zip (live-checked on server): 0, not 200: []
+wp-content/themes/onyx-child/assets/css/home-v2.css
+wp-content/themes/onyx-child/assets/css/onyx-fonts.css
+wp-content/themes/onyx-child/assets/css/shop2.css
+wp-content/themes/onyx-child/assets/data/shop2-premium.json
+wp-content/themes/onyx-child/assets/fonts/cormorant-garamond-italic-latin-9ca58f.woff2
+wp-content/themes/onyx-child/assets/fonts/cormorant-garamond-italic-latin-ext-f37747.woff2
+wp-content/themes/onyx-child/assets/fonts/cormorant-garamond-normal-latin-2fed1d.woff2
+wp-content/themes/onyx-child/assets/fonts/cormorant-garamond-normal-latin-ext-907682.woff2
+wp-content/themes/onyx-child/assets/fonts/hanken-grotesk-normal-latin-605034.woff2
+wp-content/themes/onyx-child/assets/fonts/hanken-grotesk-normal-latin-ext-af150b.woff2
+wp-content/themes/onyx-child/functions.php
+wp-content/themes/onyx-child/inc/shop2.php
+wp-content/uploads/2026/10/onyx-home-v2/hero-pens-v4.png
+wp-content/uploads/2026/10/onyx-home-v2/hero-pens-v4.webp
+wp-content/uploads/2026/10/onyx-home-v2/logos/nature.svg
+wp-content/uploads/2026/10/onyx-home-v2/logos/nih.svg
+wp-content/uploads/2026/10/onyx-home-v2/logos/pubchem.svg
+wp-content/uploads/2026/10/onyx-home-v2/logos/pubmed.svg
+wp-content/uploads/2026/10/onyx-home-v2/logos/sciencedaily.png
+wp-content/uploads/2026/10/onyx-home-v2/logos/sciencedirect.svg
+wp-content/uploads/2026/10/onyx-home-v2/pen-bpc-tb.png
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-1200.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-1254.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-480.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-800.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-1200.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-1254.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-480.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-800.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-1200.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-1254.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-480.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-800.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-1200.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-1254.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-480.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-800.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-1200.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-1254.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-480.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-800.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-1200.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-1254.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-480.webp
+wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-800.webp
