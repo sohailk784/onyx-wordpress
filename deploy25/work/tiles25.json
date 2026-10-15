@@ -1,0 +1,32 @@
+{
+ "270": {
+  "full": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-1254.webp",
+  "srcset": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-480.webp 480w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-800.webp 800w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-1200.webp 1200w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-270-1254.webp 1254w",
+  "premium": true
+ },
+ "48": {
+  "full": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-1254.webp",
+  "srcset": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-480.webp 480w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-800.webp 800w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-1200.webp 1200w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-48-1254.webp 1254w",
+  "premium": true
+ },
+ "55": {
+  "full": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-1254.webp",
+  "srcset": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-480.webp 480w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-800.webp 800w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-1200.webp 1200w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-55-1254.webp 1254w",
+  "premium": true
+ },
+ "62": {
+  "full": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-1254.webp",
+  "srcset": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-480.webp 480w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-800.webp 800w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-1200.webp 1200w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-62-1254.webp 1254w",
+  "premium": true
+ },
+ "70": {
+  "full": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-1254.webp",
+  "srcset": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-480.webp 480w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-800.webp 800w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-1200.webp 1200w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-70-1254.webp 1254w",
+  "premium": true
+ },
+ "73": {
+  "full": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-1254.webp",
+  "srcset": "http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-480.webp 480w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-800.webp 800w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-1200.webp 1200w, http://localhost:8088/wp-content/uploads/2026/10/onyx-home-v2/tiles/onyx-tile-73-1254.webp 1254w",
+  "premium": true
+ }
+}
