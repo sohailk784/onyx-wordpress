@@ -1,0 +1,44 @@
+[
+    {
+        "slug": "dual-chamber-peptide-pens",
+        "name": "Dual Chamber Peptide Pens",
+        "link": "http://localhost:8088/peptides/dual-chamber-peptide-pens/",
+        "img": "http://localhost:8088/wp-content/uploads/2026/10/3e9b80848e99b120d1d4b34240544d99-600x944.png",
+        "pname": "BPC + TB  | Dual Chamber Pen"
+    },
+    {
+        "slug": "weight-loss",
+        "name": "For Weight Loss",
+        "link": "http://localhost:8088/peptides/weight-loss/",
+        "img": "http://localhost:8088/wp-content/uploads/2026/10/c06f30bb161c2872954c690738096d25-600x600.webp",
+        "pname": "Sema"
+    },
+    {
+        "slug": "anti-aging",
+        "name": "Anti-Aging",
+        "link": "http://localhost:8088/peptides/anti-aging/",
+        "img": "http://localhost:8088/wp-content/uploads/2026/10/ee6542cccd3b8abe480608b6f304781f-600x600.webp",
+        "pname": "NAD+"
+    },
+    {
+        "slug": "muscle-mass",
+        "name": "For Muscle Mass",
+        "link": "http://localhost:8088/peptides/muscle-mass/",
+        "img": "http://localhost:8088/wp-content/uploads/2026/10/76374e12ca292419d6408b89f795a773-600x600.webp",
+        "pname": "IGF1 LR3 1mg"
+    },
+    {
+        "slug": "injuries",
+        "name": "For Injuries",
+        "link": "http://localhost:8088/peptides/injuries/",
+        "img": "http://localhost:8088/wp-content/uploads/2026/10/2e5ec86f1aafa290b4d0d5ab161b272b-600x600.webp",
+        "pname": "BPC"
+    },
+    {
+        "slug": "blends",
+        "name": "Peptide Blends",
+        "link": "http://localhost:8088/peptides/blends/",
+        "img": "http://localhost:8088/wp-content/uploads/2026/10/805752e23b8214c6cb8959bc4a72cf92-600x600.webp",
+        "pname": "BPC TB  Blend"
+    }
+]
