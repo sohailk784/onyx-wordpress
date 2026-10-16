@@ -45,3 +45,12 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
   - After: no product pixels touch an edge. The 13 remaining flags are symmetric backdrop tone, checked visually.
 - Before/after crops: `fix-clip-crops/<product>-{desktop,mobile}-before-after.png` and `_sheet-*.png`.
 - Zip rebuilt cumulatively (deploy27 + deploy28 + this fix): 303 files, check in `work/zip-check.txt`.
+
+## Fix: sparkle icon beside "Contact" on Contact 2 removed
+- Cause: the original Contact hero has an inline sparkle SVG inside the "Contact" eyebrow label (part of the page content, copied 1:1 into Contact 2). The v2 styling made it stand out as a Gemini-like star.
+- Fix (`pages2.css` and `inc/pages2.php`): hides the leading glyph in eyebrow labels that sit directly before a heading on -2 pages, using CSS `:has(+ .elementor-widget-heading)` plus a JS tag as fallback.
+  - The label text is untouched and the original /contact/ page is unchanged.
+  - Only Contact 2 matches; the other -2 pages were checked with `work/hidden.mjs`.
+  - Other icons (policy "Last updated", card icons) stay.
+- Crops: `fix-sparkle-crops/contact-2-{desktop,mobile}-before-after.png`.
+- Local note: the local DB copy had the SVG path data stripped by the import, so it was restored from live on local page 456 only, to reproduce the issue.

@@ -104,3 +104,7 @@ body.onyx-v2 .onyx-product .border-primary{border-color:var(--ink)!important;col
 body.onyx-v2 .onyx-product .border-primary:hover{background:var(--ink)!important;color:#fff!important}
 body.onyx-v2 .onyx-product .bg-secondary{background:transparent!important;border-color:var(--line)!important}
 body.onyx-v2 .onyx-product img{border-radius:24px}
+/* eyebrow labels beside headings: decorative glyph (e.g. the sparkle on Contact) removed, text untouched */
+body.onyx-v2 .elementor .elementor-widget__width-auto.elementor-widget-text-editor:has(+.elementor-widget-heading) p>svg:first-child,
+body.onyx-v2 .onyx-v2-eyebrow p>svg:first-child{display:none!important}
+body.onyx-v2 .elementor .elementor-widget__width-auto.elementor-widget-text-editor:has(+.elementor-widget-heading):has(p>svg:first-child){padding-left:16px!important;padding-right:16px!important}

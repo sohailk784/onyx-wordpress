@@ -118,6 +118,7 @@ add_action( 'wp_footer', function () {
 	if(el.classList.contains('e-grid'))return;
 	if(lum>=250)el.classList.add('onyx-v2-card');else if(lum>200)el.classList.add('onyx-v2-tint');else if(lum<120)el.classList.add('onyx-v2-tint','onyx-v2-dark');else if(blue>40)el.classList.add('onyx-v2-tint');});
 	r.querySelectorAll('.onyx-v2-card').forEach(function(el){var w=el.querySelectorAll('.elementor-widget');if(w.length===2&&w[0].textContent.trim().length<=8&&!el.querySelector('img,svg,.elementor-button'))el.classList.add('onyx-v2-stat')});
+	r.querySelectorAll('.elementor-widget-text-editor.elementor-widget__width-auto').forEach(function(w){var n=w.nextElementSibling;if(n&&n.classList.contains('elementor-widget-heading'))w.classList.add('onyx-v2-eyebrow')});
 	r.querySelectorAll('.elementor-heading-title').forEach(function(h){if(h.textContent.trim().length<=18)h.style.whiteSpace='nowrap'});
 	[].forEach.call(r.children,function(el){if(parseFloat(getComputedStyle(el).paddingLeft)<12)el.classList.add('onyx-v2-pad')});})();</script>
 	<?php
