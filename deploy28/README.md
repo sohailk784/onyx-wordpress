@@ -92,3 +92,10 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
 - Home V2 hero: one uniform #f7f5f0 background across the text and the pens, with no panel, orb, stripes, gradient or seam. The badge is plain type. This change is now IN the zip (CSS only, scoped to `.hv2-hero2`).
 - Peptides 2 grid matches GPP: 1100px max, 4 columns, 8px column gap, 2:3 image area, 3 columns at 750–989px, 2 columns below 750px. 20 products per page.
 - `onyx-pages-2-deploy28g-wording.sql` / `-rollback.sql`: 15 spelling, grammar and punctuation fixes on -2 pages only (guarded REPLACE, idempotent). The list is in the run report.
+
+## deploy28h
+- Home V2 "Shop by category": cards match Peptides 2/GPP. Grid is 1100px max with 8px column gaps: 6 columns on desktop, 3 at 750–1023px, 2 on mobile. Each card has a 2:3 #f7f6f9 image area with the full image visible, the name below as plain type, and no hover. The ink arrow circle is hidden. Text unchanged.
+- The category tiles (`uploads/2026/10/onyx-home-v2/tiles/onyx-tile-*.webp`) had blue studio backdrops. They are replaced in place (same filenames) by neutral cut-outs made from each product's own white-background photo. The dual-chamber tile uses just the pen from the product's diagram photo. No page data changes.
+- Bestsellers: 4 cards across 1100px with 8px gaps (2 on mobile). Each has a 2:3 #f7f6f9 image area, a full-width outline View Details button, and no hover.
+- `onyx-pages-2-deploy28h-mailto.sql` / `-rollback.sql`: the accessibility-policy-2 email link now points to mailto:sales@onyxhealth.net. Only the -2 page is changed; the original keeps its link.
+- Server note: a stray folder `public_html/onyxwp/wp-conte/` exists. Nothing in this repo or zip relates to it.
