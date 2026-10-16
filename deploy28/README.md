@@ -87,3 +87,8 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
 - `onyx-pages-2-deploy28f-draft3.sql` / `-rollback.sql`: set independent-doctor-consultation-2, product-catalogue-2 and analytical-reference-calculator-2 to draft, or back to publish. No -2 page, header or footer links to them.
 - Home V2 hero (neutral backdrop, plain badge) is BUILD ONLY, in `optional-home-v2/home-v2.css`. It is NOT in the zip.
 - Peptide Plans 2: no image is missing (all 6 files exist and return 200). The specs are in `peptide-plans-imgs/PROMPTS.txt`.
+
+## deploy28g
+- Home V2 hero: one uniform #f7f5f0 background across the text and the pens, with no panel, orb, stripes, gradient or seam. The badge is plain type. This change is now IN the zip (CSS only, scoped to `.hv2-hero2`).
+- Peptides 2 grid matches GPP: 1100px max, 4 columns, 8px column gap, 2:3 image area, 3 columns at 750–989px, 2 columns below 750px. 20 products per page.
+- `onyx-pages-2-deploy28g-wording.sql` / `-rollback.sql`: 15 spelling, grammar and punctuation fixes on -2 pages only (guarded REPLACE, idempotent). The list is in the run report.

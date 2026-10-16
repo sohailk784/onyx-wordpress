@@ -135,3 +135,4 @@ body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"]) .relative>.absol
 @media(max-width:1100px){body.onyx-v2 :is(#content,main) ul.products{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:860px){body.onyx-v2 :is(#content,main) ul.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px!important}}
 body.onyx-v2 :is(#content,main) ul.products li.product .onyx-view-details{width:calc(100% - 28px)!important;margin:auto 14px 14px!important;border-radius:999px!important}
+body.onyx-v2 :is(#content,main) ul.products{max-width:1100px;margin-left:auto!important;margin-right:auto!important;column-gap:8px!important;row-gap:32px!important}

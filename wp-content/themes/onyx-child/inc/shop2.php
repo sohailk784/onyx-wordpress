@@ -92,7 +92,7 @@ add_shortcode( 'onyx_shop2', function () {
 	$max   = isset( $_GET['s2_max'] ) && '' !== $_GET['s2_max'] ? max( 0, (float) $_GET['s2_max'] ) : null;
 	$page  = max( 1, (int) ( $_GET['s2_pg'] ?? 1 ) );
 	// phpcs:enable
-	$per   = 18;
+	$per   = 20;
 
 	$all = wc_get_products( array( 'limit' => -1, 'status' => 'publish', 'orderby' => 'menu_order', 'order' => 'ASC', 'visibility' => 'catalog' ) );
 	$all = array_values( array_filter( $all, fn( $p ) => 'programs' !== $p->get_meta( '_onyx_category' ) && ! has_term( 'programs', 'product_cat', $p->get_id() ) ) );
