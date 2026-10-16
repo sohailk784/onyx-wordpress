@@ -1,0 +1,5 @@
+-- deploy28l rollback: restore Home V2 tile paths (tiles/v28l/ -> tiles/). Idempotent.
+SET NAMES utf8mb4 COLLATE utf8mb4_unicode_520_ci;
+UPDATE wp_postmeta SET meta_value=REPLACE(meta_value,'onyx-home-v2\\/tiles\\/v28l\\/onyx-tile-','onyx-home-v2\\/tiles\\/onyx-tile-') WHERE post_id=(SELECT ID FROM (SELECT ID FROM wp_posts WHERE post_type='page' AND post_name='home-v2' LIMIT 1) x) AND meta_key='_elementor_data' AND LOCATE('onyx-home-v2\\/tiles\\/v28l\\/onyx-tile-',meta_value)>0;
+UPDATE wp_postmeta SET meta_value=REPLACE(meta_value,'onyx-home-v2/tiles/v28l/onyx-tile-','onyx-home-v2/tiles/onyx-tile-') WHERE post_id=(SELECT ID FROM (SELECT ID FROM wp_posts WHERE post_type='page' AND post_name='home-v2' LIMIT 1) x) AND meta_key='_elementor_data' AND LOCATE('onyx-home-v2/tiles/v28l/onyx-tile-',meta_value)>0;
+DELETE FROM wp_postmeta WHERE post_id=(SELECT ID FROM (SELECT ID FROM wp_posts WHERE post_type='page' AND post_name='home-v2' LIMIT 1) x) AND meta_key IN ('_elementor_element_cache','_elementor_css');

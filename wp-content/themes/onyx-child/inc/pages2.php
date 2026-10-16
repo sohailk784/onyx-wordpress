@@ -156,3 +156,12 @@ add_action( 'template_redirect', function () {
 		exit;
 	}
 } );
+
+/* deploy28l: Home V2 category tiles always use the versioned neutral images (tiles/v28l/), even if the page data still points at the old,
+   long-cached filenames. The SQL deploy28l fixes the data too; this keeps it right regardless. */
+add_filter( 'elementor/frontend/the_content', function ( $html ) {
+	if ( is_page( 'home-v2' ) && false !== strpos( $html, '/onyx-home-v2/tiles/onyx-tile-' ) ) {
+		$html = str_replace( '/onyx-home-v2/tiles/onyx-tile-', '/onyx-home-v2/tiles/v28l/onyx-tile-', $html );
+	}
+	return $html;
+} );

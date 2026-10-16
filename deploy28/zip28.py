@@ -3,7 +3,7 @@
 import os,re,zipfile
 L='/workspace/onyx/local/'; D='/workspace/onyx/deploy28/'; T='wp-content/themes/onyx-child/'
 base=zipfile.ZipFile('/workspace/onyx-wp-fresh/deploy27/onyx-peptides-2-deploy27-wp-content.zip').namelist()
-files=sorted(set([f for f in base if not f.endswith('/')]+[T+'functions.php',T+'inc/pages2.php',T+'assets/css/pages2.css',T+'assets/css/onyx-fonts.css',T+'assets/data/shop2-premium-bg.json',T+'assets/js/home-v2.js',T+'assets/css/home-v2.css',T+'inc/shop2.php',T+'assets/css/shop2.css']+['wp-content/uploads/2026/10/onyx-home-v2/tiles/'+x for x in sorted(os.listdir(L+'wp-content/uploads/2026/10/onyx-home-v2/tiles'))]))
+files=sorted(set([f for f in base if not f.endswith('/')]+[T+'functions.php',T+'inc/pages2.php',T+'assets/css/pages2.css',T+'assets/css/onyx-fonts.css',T+'assets/data/shop2-premium-bg.json',T+'assets/js/home-v2.js',T+'assets/css/home-v2.css',T+'inc/shop2.php',T+'assets/css/shop2.css']+[os.path.relpath(os.path.join(r,x),L) for r,_,fs in os.walk(L+'wp-content/uploads/2026/10/onyx-home-v2/tiles') for x in fs]))
 missing=[f for f in files if not os.path.isfile(L+f)]; assert not missing, missing
 z=D+'onyx-pages-2-deploy28-wp-content.zip'
 if os.path.exists(z): os.remove(z)
