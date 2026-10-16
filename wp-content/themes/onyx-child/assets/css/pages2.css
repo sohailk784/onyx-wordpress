@@ -136,3 +136,19 @@ body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"]) .relative>.absol
 @media(max-width:860px){body.onyx-v2 :is(#content,main) ul.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px!important}}
 body.onyx-v2 :is(#content,main) ul.products li.product .onyx-view-details{width:calc(100% - 28px)!important;margin:auto 14px 14px!important;border-radius:999px!important}
 body.onyx-v2 :is(#content,main) ul.products{max-width:1100px;margin-left:auto!important;margin-right:auto!important;column-gap:8px!important;row-gap:32px!important}
+/* deploy28i – product/programme detail pages in the 2 flow (?v2=1): GPP-style neutral cards, no hover/zoom, no blue. Content unchanged. */
+body.onyx-v2.single-product .onyx-tw section.grid>div>div.relative.overflow-hidden.rounded-2xl{background:#f7f6f9!important;border:0!important;box-shadow:none!important;border-radius:14px!important}
+body.onyx-v2.single-product .onyx-tw .onyx-zoom{cursor:default!important}
+body.onyx-v2.single-product .onyx-tw .onyx-zoom img,body.onyx-v2.single-product .onyx-tw .onyx-zoom:hover img{transform:none!important;transition:none!important;object-fit:contain!important;border-radius:14px!important;mix-blend-mode:multiply}
+body.onyx-v2.single-product .onyx-tw .grid>div.rounded-2xl.border{background:#f7f6f9!important;border:0!important;border-radius:14px!important;box-shadow:none!important;transform:none!important;transition:none!important}
+body.onyx-v2.single-product .onyx-tw .grid:has(>div.rounded-2xl.border){gap:8px!important}
+body.onyx-v2.single-product .onyx-tw .grid>div.rounded-2xl.border svg{color:var(--ink,#15171c)!important}
+body.onyx-v2.single-product .onyx-tw .grid>div.rounded-2xl.border h3{font-family:var(--serif)!important;font-weight:500!important;font-size:21px!important;line-height:1.2!important}
+body.onyx-v2.single-product .onyx-tw a:hover,body.onyx-v2.single-product .onyx-tw .group:hover,body.onyx-v2.single-product .onyx-tw [class*="hover:"]:hover{transform:none!important;box-shadow:none!important}
+body.onyx-v2.single-product .onyx-tw section.grid form,body.onyx-v2.single-product .onyx-tw section.grid .flex:has(>button){flex-wrap:wrap;gap:10px}
+body.onyx-v2.single-product .onyx-tw section.grid button{min-width:0;white-space:nowrap;letter-spacing:.12em;text-transform:uppercase;font-size:12px!important;font-weight:600!important;border-radius:999px!important;transition:none!important}
+body.onyx-v2.single-product .onyx-tw section.grid button.w-full{background:transparent!important;color:var(--ink,#15171c)!important;border:1px solid var(--ink,#15171c)!important}
+body.onyx-v2.single-product .onyx-tw [class*="text-accent"]:not(button){color:var(--ink,#15171c)!important}
+body.onyx-v2.single-product:is(#onyx-boost,.single-product) .onyx-tw.onyx-product>div.border-b.bg-secondary{background:transparent!important;border-color:var(--line,#e2dfd8)!important}
+body.onyx-v2.single-product:is(#onyx-boost,.single-product) .onyx-tw.onyx-product span.text-accent{color:#6b6e74!important}
+body.onyx-v2.single-product:is(#onyx-boost,.single-product) .onyx-tw.onyx-product section.grid button.w-full.bg-accent{background:transparent!important;color:var(--ink,#15171c)!important;border:1px solid var(--ink,#15171c)!important}

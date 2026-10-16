@@ -99,3 +99,9 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
 - Bestsellers: 4 cards across 1100px with 8px gaps (2 on mobile). Each has a 2:3 #f7f6f9 image area, a full-width outline View Details button, and no hover.
 - `onyx-pages-2-deploy28h-mailto.sql` / `-rollback.sql`: the accessibility-policy-2 email link now points to mailto:sales@onyxhealth.net. Only the -2 page is changed; the original keeps its link.
 - Server note: a stray folder `public_html/onyxwp/wp-conte/` exists. Nothing in this repo or zip relates to it.
+
+## deploy28i
+- Script text under Home V2 "Shop by category" and Bestsellers. Root cause: the two Elementor HTML widgets held inline `<script>` blocks. A save or import without `unfiltered_html` (kses) stripped the `<script>` tags and entity-escaped the code, so it printed as visible text. kses also cut `<=2;nx.disabled=ul.scrollLeft>` out of the pager code as if it were a tag, which broke the pager.
+  - Fix: the code (pager repaired) now lives in `onyx-child/assets/js/home-v2.js`, enqueued only on home-v2. On load, it also removes any leftover code text inside `.hv2-sec` HTML widgets, so live is clean even before the SQL runs.
+  - `onyx-home-v2-deploy28i-scripttext.sql`: removes the two code strings from home-v2 `_elementor_data`. It backs up the old data once to `_onyx_elementor_data_bak28i` and is idempotent. `-rollback.sql` restores from that backup.
+- Programme and product detail pages in the 2 flow (`?v2=1`, carried from Peptide Plans 2 links): #f7f6f9 image panel with the image fully visible, no zoom or hover, neutral application cards with 8px gaps and serif titles, buttons sized to fit. The light-blue breadcrumb bar and blue eyebrow are now neutral. Scoped to `body.onyx-v2.single-product`, so original pages are unchanged.
