@@ -1,5 +1,7 @@
+premium images referenced by shop2-premium.json: 273, all in zip
+deploy27+deploy28 key files present: ['wp-content/themes/onyx-child/inc/shop2.php', 'wp-content/themes/onyx-child/inc/pages2.php', 'wp-content/themes/onyx-child/assets/css/shop2.css', 'wp-content/themes/onyx-child/assets/css/pages2.css', 'wp-content/themes/onyx-child/assets/data/shop2-premium-bg.json', 'wp-content/themes/onyx-child/assets/css/home-v2.css', 'wp-content/themes/onyx-child/functions.php']
 zip: /workspace/onyx/deploy28/onyx-pages-2-deploy28-wp-content.zip
-files in zip: 302
+files in zip: 303
 referenced theme assets checked: 20, missing from zip AND existing theme: []
 existing (unchanged) theme files referenced, already on server: 10
 functions.php require_once targets missing from zip AND repo theme: []
@@ -7,6 +9,7 @@ wp-content/themes/onyx-child/assets/css/home-v2.css
 wp-content/themes/onyx-child/assets/css/onyx-fonts.css
 wp-content/themes/onyx-child/assets/css/pages2.css
 wp-content/themes/onyx-child/assets/css/shop2.css
+wp-content/themes/onyx-child/assets/data/shop2-premium-bg.json
 wp-content/themes/onyx-child/assets/data/shop2-premium.json
 wp-content/themes/onyx-child/assets/fonts/cormorant-garamond-italic-latin-9ca58f.woff2
 wp-content/themes/onyx-child/assets/fonts/cormorant-garamond-italic-latin-ext-f37747.woff2

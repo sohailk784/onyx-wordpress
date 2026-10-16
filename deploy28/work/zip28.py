@@ -3,7 +3,7 @@
 import os,re,zipfile
 L='/workspace/onyx/local/'; D='/workspace/onyx/deploy28/'; T='wp-content/themes/onyx-child/'
 base=zipfile.ZipFile('/workspace/onyx-wp-fresh/deploy27/onyx-peptides-2-deploy27-wp-content.zip').namelist()
-files=sorted(set([f for f in base if not f.endswith('/')]+[T+'functions.php',T+'inc/pages2.php',T+'assets/css/pages2.css',T+'assets/css/onyx-fonts.css']))
+files=sorted(set([f for f in base if not f.endswith('/')]+[T+'functions.php',T+'inc/pages2.php',T+'assets/css/pages2.css',T+'assets/css/onyx-fonts.css',T+'assets/data/shop2-premium-bg.json']))
 missing=[f for f in files if not os.path.isfile(L+f)]; assert not missing, missing
 z=D+'onyx-pages-2-deploy28-wp-content.zip'
 if os.path.exists(z): os.remove(z)
@@ -24,6 +24,13 @@ bad=[r for r in sorted(set(refs)) if r not in names and not os.path.isfile('/wor
 onserver=[r for r in sorted(set(refs)) if r not in names and r not in bad]
 req=re.findall(r"require_once get_stylesheet_directory\(\) \. '/([^']+)'",open(L+T+'functions.php').read())
 badreq=[r for r in req if T+r not in names and not os.path.isfile('/workspace/onyx-wp-fresh/'+T+r)]
-rep=f"zip: {z}\nfiles in zip: {len(names)}\nreferenced theme assets checked: {len(set(refs))}, missing from zip AND existing theme: {bad}\nexisting (unchanged) theme files referenced, already on server: {len(onserver)}\nfunctions.php require_once targets missing from zip AND repo theme: {badreq}\n"
+import json
+prem=json.load(open(L+T+'assets/data/shop2-premium.json'))
+imgs=['wp-content/uploads/'+r for v in prem.values() for r in v.values()]
+missimg=[i for i in imgs if i not in names]
+assert not missimg, missimg
+keyfiles=[T+'inc/shop2.php',T+'inc/pages2.php',T+'assets/css/shop2.css',T+'assets/css/pages2.css',T+'assets/data/shop2-premium-bg.json',T+'assets/css/home-v2.css',T+'functions.php']
+assert all(k in names for k in keyfiles)
+rep=f"premium images referenced by shop2-premium.json: {len(imgs)}, all in zip\ndeploy27+deploy28 key files present: {keyfiles}\nzip: {z}\nfiles in zip: {len(names)}\nreferenced theme assets checked: {len(set(refs))}, missing from zip AND existing theme: {bad}\nexisting (unchanged) theme files referenced, already on server: {len(onserver)}\nfunctions.php require_once targets missing from zip AND repo theme: {badreq}\n"
 print(rep); assert not bad and not badreq
 open(D+'work/zip-check.txt','w').write(rep+"\n".join(sorted(names))+"\n"); print(rep)

@@ -32,3 +32,16 @@ There is no "About" page on the live site.
 
 ## Local test (add to cart → checkout → thank-you)
 Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /checkout-2/) → Place order with the local USDT gateway → `/checkout-2/order-received/735/…` styled. The original /cart/ still links to /checkout/. Test orders 734 and 735 exist on the LOCAL DB only.
+
+## Fix: product images clipped on Peptides 2 (cards stay 3:4 portrait)
+- Cause: premium images were drawn edge to edge (square image at 100% card width, scaled 1.04–1.08), and originals were scaled 1.3–1.34×. Pens or boxes touching the image edge were cut off on the left or right.
+- Fix (`shop2.css` deploy28b block plus `shop2.php`):
+  - all scale-ups removed; every image uses `object-fit: contain`;
+  - premium images inset to 92% width (94% on mobile), with a soft 6% side and 14% top/bottom feather;
+  - originals use 9% padding (7% on mobile);
+  - each premium card's backdrop gradient is taken from that image's own edge colours (`assets/data/shop2-premium-bg.json`), so the inset has no square edge.
+- Detection: `work/fix-clip/clip.mjs` shoots every card on every page at 1440 and 390; `edge.py` flags pixels touching the card edge.
+  - Before: 78 cards flagged at desktop, 81 at mobile, 82 distinct products (`fix-clip-crops/_affected.txt`).
+  - After: no product pixels touch an edge. The 13 remaining flags are symmetric backdrop tone, checked visually.
+- Before/after crops: `fix-clip-crops/<product>-{desktop,mobile}-before-after.png` and `_sheet-*.png`.
+- Zip rebuilt cumulatively (deploy27 + deploy28 + this fix): 303 files, check in `work/zip-check.txt`.
