@@ -152,3 +152,28 @@ body.onyx-v2.single-product .onyx-tw [class*="text-accent"]:not(button){color:va
 body.onyx-v2.single-product:is(#onyx-boost,.single-product) .onyx-tw.onyx-product>div.border-b.bg-secondary{background:transparent!important;border-color:var(--line,#e2dfd8)!important}
 body.onyx-v2.single-product:is(#onyx-boost,.single-product) .onyx-tw.onyx-product span.text-accent{color:#6b6e74!important}
 body.onyx-v2.single-product:is(#onyx-boost,.single-product) .onyx-tw.onyx-product section.grid button.w-full.bg-accent{background:transparent!important;color:var(--ink,#15171c)!important;border:1px solid var(--ink,#15171c)!important}
+/* deploy28j – programme route /peptide-plans/<slug>/?v2=1 (woocommerce/single-plan.php, div.onyx-plan): neutral premium, GPP typography, no blue, no hover. Content unchanged. */
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan{--ink:#15171c;background:#f7f5f0;color:#15171c}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(section,.bg-secondary,.bg-background){background:#f7f5f0!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan section+section{border-top:1px solid #e2dfd8}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan [class*="blur-"],body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .absolute.inset-0[class*="from-primary"]{display:none!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(h1,h2,h3){font-family:"Cormorant Garamond",Georgia,serif!important;font-weight:500!important;letter-spacing:0!important;color:#15171c!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan h1{font-size:clamp(40px,4.4vw,60px)!important;line-height:1.02!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan h2{font-size:clamp(30px,3vw,40px)!important;line-height:1.1!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan h3{font-size:22px!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(p,li,span,a,nav){font-family:"Hanken Grotesk",system-ui,sans-serif}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .text-3xl.font-black:not(h1):not(h2){font-family:"Hanken Grotesk",system-ui,sans-serif!important;font-weight:500!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(.text-accent,[class*="text-accent"]):not(button):not(h1):not(h2):not(h3){color:#6b6e74!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(a,span).text-accent svg,body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan a.text-accent{color:#15171c!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan span.rounded-full[class*="border-accent"],body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan span.rounded-full.border.bg-background{background:transparent!important;border:0!important;padding:0!important;border-radius:0!important;box-shadow:none!important;color:#6b6e74!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan span.rounded-full[class*="border-accent"]{letter-spacing:.22em!important;font-size:11px!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(.bg-card,.rounded-2xl.border){background:#f7f6f9!important;border:0!important;border-radius:14px!important;box-shadow:none!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(.grid.gap-5,.grid.gap-4){gap:8px!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan [class*="bg-accent/"]{background:transparent!important;color:#15171c!important;border:1px solid #15171c}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .rounded-3xl.border{background:#f7f6f9!important;border:0!important;box-shadow:none!important;border-radius:14px!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .rounded-3xl.border img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .rounded-3xl[class*="from-primary"]{background:#f7f6f9!important;color:#15171c!important;box-shadow:none!important;border-radius:14px!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .rounded-3xl[class*="from-primary"] :is(h2,p){color:#15171c!important;opacity:1!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan button[type=submit]{background:#15171c!important;color:#fff!important;border:1px solid #15171c!important;box-shadow:none!important;border-radius:999px!important;font-weight:600!important;font-size:12px!important;letter-spacing:.14em!important;text-transform:uppercase;padding:15px 30px!important;transform:none!important;transition:none!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(a,button,.group,[class*="hover:"]):hover,body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan :is(a,button,.group):hover *{transform:none!important;translate:none!important;scale:none!important;box-shadow:none!important}
+body.onyx-v2:is(#onyx-boost,.single-product) .onyx-tw.onyx-plan .group:hover{border-color:transparent!important}

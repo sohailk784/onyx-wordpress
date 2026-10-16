@@ -105,3 +105,12 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
   - Fix: the code (pager repaired) now lives in `onyx-child/assets/js/home-v2.js`, enqueued only on home-v2. On load, it also removes any leftover code text inside `.hv2-sec` HTML widgets, so live is clean even before the SQL runs.
   - `onyx-home-v2-deploy28i-scripttext.sql`: removes the two code strings from home-v2 `_elementor_data`. It backs up the old data once to `_onyx_elementor_data_bak28i` and is idempotent. `-rollback.sql` restores from that backup.
 - Programme and product detail pages in the 2 flow (`?v2=1`, carried from Peptide Plans 2 links): #f7f6f9 image panel with the image fully visible, no zoom or hover, neutral application cards with 8px gaps and serif titles, buttons sized to fit. The light-blue breadcrumb bar and blue eyebrow are now neutral. Scoped to `body.onyx-v2.single-product`, so original pages are unchanged.
+
+## deploy28j
+- `/peptide-plans/<slug>/` is a theme rewrite (`inc/woocommerce.php`: `^peptide-plans/([^/]+)/?$` → `index.php?product=<slug>`). `woocommerce/single-product.php` then hands any product with `_onyx_plan` meta to `woocommerce/single-plan.php` (div.onyx-plan, the React PlanDetail port). My local copy had neither the plan meta nor the flushed rewrite, so it showed the normal product page. Both are now restored locally from `tools/plans.php` with `/workspace/onyx/live2/plans`.
+- New pages2.css block (scoped to `body.onyx-v2 .onyx-plan`, so only with `?v2=1`):
+  - all sections ivory, cards #f7f6f9, 8px gaps, no blur orb or overlays
+  - serif headings in GPP proportions, badges as plain text
+  - black pill buttons; the navy CTA panel becomes a neutral panel
+  - full image (aspect auto, contain), no hover
+- Add-to-cart forms keep `?v2=1`. Content unchanged.
