@@ -54,3 +54,23 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
   - Other icons (policy "Last updated", card icons) stay.
 - Crops: `fix-sparkle-crops/contact-2-{desktop,mobile}-before-after.png`.
 - Local note: the local DB copy had the SVG path data stripped by the import, so it was restored from live on local page 456 only, to reproduce the issue.
+
+## Fix: "On this page" / sidebar card cut off → full card, sticky left sidebar
+- Checked all 22 -2 pages (`work/side.mjs`). Pages with a sidebar card beside long content:
+  - terms-conditions-2, privacy-policy-2, refund-policy-2, shipping-policy-2, cookies-policy-2, accessibility-policy-2 (the "On this page" table of contents);
+  - product-catalogue-2 ("Categories" sidebar).
+  - No other -2 page has one.
+- Why it was cut off:
+  - the v2 heading styles turned the small "On this page" label into a large serif h2;
+  - the short-heading `nowrap` rule then pushed it under the content card;
+  - the table of contents (taller than the viewport on Terms and Privacy) had no internal scroll.
+- Why it wasn't sticky:
+  - the Elementor sidebar column stretches to the full grid height, so sticky has no room to move;
+  - no `overflow: hidden` ancestor (body uses `overflow-x: clip`, which doesn't break sticky).
+- Fix (`pages2.css` and `inc/pages2.php`):
+  - JS tags the sidebar column (`onyx-v2-sticky`), found from the heading, and sets `--onyx-v2-hdr` to the sticky header's height;
+  - CSS: `position: sticky; top: header + 24px; align-self: start; max-height: 100vh - header - 48px; overflow-y: auto`;
+  - "On this page" becomes a small uppercase label inside a white card; Categories keeps its own card;
+  - the text is unchanged.
+- Mobile/tablet: these sidebars are hidden on tablet and mobile by the original page's own Elementor settings, so they are not shown there. The settings were left as authored.
+- Crops: `fix-toc-crops/{before,after}-<page>-{desktop,mobile}-{start,mid,late}.png`. Card position per scroll step: `_before-visibility.txt` and `_after-visibility.txt` (after: the card is pinned at top ≈149px at mid-scroll on every page).
