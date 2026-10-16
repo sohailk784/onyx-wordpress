@@ -80,3 +80,10 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
 - The sidebar-to-content column gap is forced to 40px; this overrides the v2 grid gap, which was 18px on the catalogue.
 - Checked at 1025, 1100, 1200, 1280, 1366 and 1440 on all 7 pages (`fix-toc-label-crops/_gap-label-check.txt`): gap 40px everywhere, label fully inside its card. At 1024 and below the original pages hide the sidebar.
 - After crops: `fix-toc-label-crops/after-{terms-conditions-2,privacy-policy-2,product-catalogue-2}-{1440,1280}-{start,mid}.png`.
+
+## deploy28f
+- Peptides 2: every card uses one neutral backdrop (#f7f6f9, sampled from globalpenpeptide.com). The products' own white-background packshots are multiplied onto it. Blue-backdrop studio renders are dropped, except Bacteriostatic Water (its own photo is dark), which keeps its render under a soft radial mask. Dark-photo products (6 vials and 6 programmes) show full-bleed. All card hover motion is removed.
+- -2 pages: Woo product grids use a CSS grid. "View Details" is a contained pill (width minus 28px, 14px inset), so nothing overlaps from 390 to 1440. Card hover effects are removed. The plan-card image overlays are hidden.
+- `onyx-pages-2-deploy28f-draft3.sql` / `-rollback.sql`: set independent-doctor-consultation-2, product-catalogue-2 and analytical-reference-calculator-2 to draft, or back to publish. No -2 page, header or footer links to them.
+- Home V2 hero (neutral backdrop, plain badge) is BUILD ONLY, in `optional-home-v2/home-v2.css`. It is NOT in the zip.
+- Peptide Plans 2: no image is missing (all 6 files exist and return 200). The specs are in `peptide-plans-imgs/PROMPTS.txt`.

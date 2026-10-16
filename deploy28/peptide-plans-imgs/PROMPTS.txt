@@ -1,0 +1,30 @@
+PEPTIDE PLANS 2 – IMAGE STATUS AND SPECS (deploy28f)
+
+FINDING: no image file is missing. All 6 programme images exist in the media library and are served by the live server
+(HTTP 200 for the 1024px and full sizes, 16 Oct 2026). Locally they render on Peptide Plans 2.
+The live server was very slow or timed out on some requests while I tested, and that can leave images blank. deploy28f also removes the dark
+decorative overlays on the plan-card images on -2 pages, so the photos show cleanly. Nothing has to be regenerated to fix
+"missing" images. The specs below are only for an optional premium restyle, to replace the current lifestyle photos
+with studio images that match the neutral -2 look.
+
+Common style for all 6: 1536x1024 (3:2) WebP, under 250 KB. Premium studio still life, soft diffused daylight,
+seamless backdrop in very light blue (#eef3f9 into #f7f6f9), gentle floor shadow, shallow depth of field, calm luxury
+pharmaceutical aesthetic. ONYX white dual-chamber pen(s) or white vials with a royal-blue cap/label band, label facing
+away or out of focus. Show NO people, NO body parts, NO text, NO numbers, NO claims, NO logos other than the soft ONYX
+mark already on the products, and NO food, syringes, or needles in use.
+
+1. anti-aging-program.webp – 1536x1024 – Anti-Aging Peptide Program
+   Prompt: "Premium studio still life, two white ONYX research pens lying at a gentle diagonal on a light-blue seamless backdrop, a smooth white stone and a single sprig of white orchid out of focus behind, soft daylight, minimal, luxurious, no text."
+2. lean-muscle-mass-program.webp – 1536x1024 (current is 1024x1024) – Lean Muscle Mass Peptide Program
+   Prompt: "Premium studio still life, three white ONYX research pens standing upright in a neat row on a pale stone plinth, light-blue seamless backdrop, crisp soft shadows, athletic minimal mood with a folded light-grey towel softly blurred behind, no text."
+3. recovery-immunity-program.webp – 1536x1024 – Recovery & Immunity Peptide Program
+   Prompt: "Premium studio still life, two white ONYX research pens and one white vial on a light linen cloth, light-blue seamless backdrop, a eucalyptus sprig out of focus, calm restorative mood, soft daylight, no text."
+4. weight-loss-program.webp – 1536x1024 – Weight Loss & Fat Burning Peptide Program
+   Prompt: "Premium studio still life, a single white ONYX research pen on a slim white acrylic stand next to a soft measuring tape loosely coiled and out of focus, light-blue seamless backdrop, airy, minimal, no text."
+5. increased-muscle-mass.webp – 1536x1024 (current is 1200x896) – Increased Muscle Mass Peptide Program
+   Prompt: "Premium studio still life, four white ONYX research pens fanned on a matte light-grey surface beside a small chrome dumbbell softly blurred, light-blue seamless backdrop, strong but soft light, no text."
+6. muscle-mass-definition.webp – 1536x1024 (current is 1024x1024) – Muscle Mass & Definition Peptide Program
+   Prompt: "Premium studio still life, three white ONYX research pens arranged in a precise geometric stack on a white marble block, light-blue seamless backdrop, crisp sculpted shadows, refined, no text."
+
+The references in reference/ are the current images, named <product-slug>--<current file>.
+To wire new images in later: replace each product's featured image (keep the slug-based filenames above).

@@ -1,0 +1,137 @@
+/* deploy28 – "<Title> 2" pages in the Home V2 / Peptides 2 luxury language.
+   Scoped to body.onyx-v2 (added only on pages carrying _onyx_v2_source, or product/endpoint URLs in the v2 flow).
+   Style only: no content is added, removed or reworded. Header and footer are left as on Home V2. */
+body.onyx-v2{--ivory:#f7f5f0;--ink:#15171c;--body:#4a4d54;--muted:#6b6e74;--slate:#4f6e8c;--sky:#dce8f2;--sky2:#eef4fa;--line:#e2dfd8;
+ --serif:"Cormorant Garamond",Georgia,serif;--sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--ivory)!important}
+/* Tailwind (Woo/app templates) – remap the palette inside the page body only */
+body.onyx-v2 #content,body.onyx-v2 main,body.onyx-v2 .onyx-product,body.onyx-v2 .elementor[data-elementor-type="wp-page"]{
+ --background:#f7f5f0;--foreground:#15171c;--card:#fff;--card-foreground:#15171c;--primary:#15171c;--primary-foreground:#fff;--secondary:#eef4fa;--secondary-foreground:#15171c;
+ --muted:#f1efe9;--muted-foreground:#6b6e74;--accent:#4f6e8c;--accent-foreground:#fff;--border:#e2dfd8;--input:#e2dfd8;--ring:#4f6e8c;--radius:.9rem;
+ --onyx-background:#f7f5f0;--onyx-foreground:#15171c;--onyx-primary:#15171c;--onyx-secondary:#eef4fa;--onyx-accent:#4f6e8c;--onyx-border:#e2dfd8;--onyx-muted-foreground:#6b6e74;
+ --e-global-color-primary:#15171c;--e-global-color-secondary:#4f6e8c;--e-global-color-text:#4a4d54;--e-global-color-accent:#4f6e8c;
+ font-family:var(--sans)!important;color:var(--ink);-webkit-font-smoothing:antialiased;background:var(--ivory)}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(p,li,td,th,label,input,select,textarea,button,a,span,div,dd,dt,summary){font-family:var(--sans)}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(h1,h2,h3,.elementor-heading-title){font-family:var(--serif)!important;font-weight:500!important;letter-spacing:-.01em!important;color:var(--ink)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h1,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h1.elementor-heading-title{font-size:clamp(44px,5.4vw,80px)!important;line-height:1!important;font-weight:400!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h2,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h2.elementor-heading-title{font-size:clamp(30px,3.2vw,44px)!important;line-height:1.08!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h3,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h3.elementor-heading-title{font-size:clamp(20px,1.7vw,24px)!important;line-height:1.2!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(h4,h5,h6){font-family:var(--sans)!important;color:var(--ink)!important;letter-spacing:.02em}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(p,li){color:var(--body)}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) a:not([class*="button"]):not(.btn):not([class*="bg-"]){color:var(--slate)}
+/* ---------- Elementor pages ---------- */
+body.onyx-v2 .elementor[data-elementor-type="wp-page"]>.e-con{background:transparent!important;background-image:none!important}
+/* hero (first section): navy band -> ivory editorial header with a sky panel */
+body.onyx-v2 .elementor[data-elementor-type="wp-page"]>.e-con:first-child{background:linear-gradient(180deg,#f7f5f0 0,#eef4fa 100%)!important;border-bottom:1px solid var(--line);padding-top:clamp(40px,5vw,72px)!important;padding-bottom:clamp(40px,5vw,72px)!important}
+body.onyx-v2 .elementor[data-elementor-type="wp-page"]>.e-con:first-child :is(p,li,span,div,a){color:var(--body)!important}
+body.onyx-v2 .elementor[data-elementor-type="wp-page"]>.e-con:first-child .elementor-widget-text-editor:first-child,
+body.onyx-v2 .elementor[data-elementor-type="wp-page"]>.e-con:first-child .elementor-widget__width-auto{background:transparent!important;padding-left:0!important}
+body.onyx-v2 .elementor[data-elementor-type="wp-page"]>.e-con:first-child .elementor-widget__width-auto :is(p,span,div){color:var(--slate)!important;font-size:12px!important;letter-spacing:.22em!important;text-transform:uppercase}
+/* small labels / eyebrows used across sections */
+body.onyx-v2 .elementor .elementor-widget__width-auto.elementor-widget-text-editor{background:transparent!important}
+body.onyx-v2 .elementor .elementor-widget__width-auto.elementor-widget-text-editor :is(p,span,div){color:var(--slate)!important;letter-spacing:.18em;text-transform:uppercase;font-size:11px!important}
+/* cards: any inner container with its own background becomes a soft luxury card */
+body.onyx-v2 .elementor[data-elementor-type="wp-page"] .e-con .e-con[class]{border-color:var(--line)!important}
+body.onyx-v2 .elementor[data-elementor-type="wp-page"] .e-con.e-grid{background:transparent!important;gap:18px!important}
+body.onyx-v2 .onyx-v2-card{background:#fff!important;border-radius:24px!important;border:1px solid var(--line)!important;box-shadow:0 24px 48px -36px rgba(21,23,28,.28)!important}
+body.onyx-v2 .onyx-v2-tint{background:var(--sky2)!important;border-radius:24px!important;border:0!important}
+body.onyx-v2 .onyx-v2-icon{background:var(--sky)!important;color:var(--slate)!important;border-radius:999px!important}
+body.onyx-v2 .elementor :is(svg,i)[class*="icon"],body.onyx-v2 .elementor .elementor-icon{color:var(--slate)!important;fill:currentColor}
+/* text */
+body.onyx-v2 .elementor .elementor-widget-text-editor{color:var(--body)!important;font-size:15.5px;line-height:1.75}
+body.onyx-v2 .elementor .elementor-widget-text-editor :is(strong,b){color:var(--ink)}
+body.onyx-v2 .elementor table{border-collapse:separate!important;border-spacing:0;border:1px solid var(--line)!important;border-radius:18px;overflow:hidden;background:#fff}
+body.onyx-v2 .elementor :is(td,th){border-color:var(--line)!important;padding:12px 16px!important}
+body.onyx-v2 .elementor th{background:var(--sky2)!important;color:var(--ink)!important;font-weight:500}
+/* buttons */
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(.elementor-button,.button,button[type=submit],input[type=submit],.ff-btn-submit,.checkout-button,#place_order,.bg-primary){background:var(--ink)!important;color:#fff!important;border:0!important;border-radius:999px!important;font-family:var(--sans)!important;font-weight:500!important;letter-spacing:.08em;transition:background .25s,transform .25s}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(.elementor-button,.button,button[type=submit],input[type=submit],.ff-btn-submit,.checkout-button,#place_order):hover{background:#2a2d35!important;transform:translateY(-1px)}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .elementor-button{padding:16px 30px!important;font-size:12.5px!important;text-transform:uppercase}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .elementor-button :is(span,svg,i){color:#fff!important;fill:#fff!important}
+/* accordion (FAQ) */
+body.onyx-v2 .elementor-accordion{display:flex;flex-direction:column;gap:12px}
+body.onyx-v2 .elementor-accordion .elementor-accordion-item{background:#fff!important;border:1px solid var(--line)!important;border-radius:20px!important;overflow:hidden}
+body.onyx-v2 .elementor-accordion .elementor-tab-title{background:#fff!important;border:0!important;padding:22px 26px!important}
+body.onyx-v2 .elementor-accordion .elementor-tab-title a,body.onyx-v2 .elementor-accordion .elementor-accordion-title{font-family:var(--serif)!important;font-size:22px!important;font-weight:500!important;color:var(--ink)!important}
+body.onyx-v2 .elementor-accordion .elementor-tab-title.elementor-active{background:var(--sky2)!important}
+body.onyx-v2 .elementor-accordion .elementor-accordion-icon{color:var(--slate)!important}
+body.onyx-v2 .elementor-accordion .elementor-tab-content{background:#fff!important;border:0!important;padding:4px 26px 24px!important;color:var(--body)!important;font-size:15.5px;line-height:1.75}
+/* images */
+body.onyx-v2 .elementor .elementor-widget-image img{border-radius:20px}
+/* forms (Fluent Forms / Woo / app) */
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(input[type=text],input[type=email],input[type=tel],input[type=password],input[type=number],input[type=search],input[type=url],select,textarea,.ff-el-form-control):not(.onyx-calc__input){border:1px solid var(--line)!important;border-radius:14px!important;background:#fff!important;color:var(--ink)!important;box-shadow:none!important;font-family:var(--sans)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(input,select,textarea):focus{border-color:var(--slate)!important;outline:2px solid rgba(79,110,140,.15)!important;outline-offset:0}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(label,.ff-el-input--label label){color:var(--ink)!important;font-weight:500}
+/* ---------- Tailwind / Woo templates (cart, checkout, account, wishlist, B2B login, thank-you, product) ---------- */
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(.rounded-xl,.rounded-2xl,.rounded-lg).bg-card,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .bg-card.border{border-radius:24px!important;border-color:var(--line)!important;box-shadow:0 24px 48px -36px rgba(21,23,28,.28)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(.bg-secondary,.bg-muted,[class*="bg-secondary/"],[class*="bg-muted/"]){background:var(--sky2)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is([class*="from-primary"],[class*="bg-gradient"]){background-image:none!important;background-color:var(--sky2)!important;color:var(--ink)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is([class*="from-primary"],[class*="bg-gradient"]) :is(h1,h2,h3,p,span,li){color:var(--ink)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .text-primary-foreground{color:#fff}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) :is(.uppercase.tracking-wider,.tracking-widest){color:var(--slate)!important;letter-spacing:.18em!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .woocommerce :is(table.shop_table,.cart_totals,.woocommerce-checkout-review-order){border-color:var(--line)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .woocommerce-notices-wrapper :is(.woocommerce-message,.woocommerce-info,.woocommerce-error){border-radius:16px!important;border:1px solid var(--line)!important;background:#fff!important;color:var(--ink)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .woocommerce-order-overview,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .woocommerce-thankyou-order-received{font-family:var(--sans)}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .woocommerce-thankyou-order-received{font-family:var(--serif)!important;font-size:30px!important;color:var(--ink)!important}
+/* Elementor shortcode widgets inside -2 pages (check code, calculator, plans) inherit the palette */
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .elementor-widget-shortcode .onyx-tw{--primary:#15171c;--accent:#4f6e8c}
+@media (max-width:767px){
+ body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h1,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h1.elementor-heading-title{font-size:42px!important}
+ body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h2,body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) h2.elementor-heading-title{font-size:30px!important}
+ body.onyx-v2 .elementor-accordion .elementor-tab-title{padding:18px 20px!important}
+ body.onyx-v2 .elementor-accordion .elementor-tab-title a{font-size:19px!important}
+}
+/* stat chips (short value + label) */
+body.onyx-v2 .onyx-v2-stat{justify-content:center}
+body.onyx-v2 .onyx-v2-stat .elementor-widget:first-child :is(p,div,span){font-family:var(--serif)!important;font-size:clamp(30px,3vw,40px)!important;font-weight:500!important;color:var(--ink)!important;line-height:1.05!important;letter-spacing:-.01em}
+body.onyx-v2 .onyx-v2-stat .elementor-widget:last-child :is(p,div,span){font-size:11px!important;letter-spacing:.2em!important;text-transform:uppercase;color:var(--slate)!important;line-height:1.5!important}
+@media (max-width:1024px){body.onyx-v2 .onyx-v2-pad{padding-left:20px!important;padding-right:20px!important}}
+/* sections that were dark navy in the original: light tint, ink text */
+body.onyx-v2 .onyx-v2-tint{background-image:none!important}
+body.onyx-v2 .onyx-v2-dark,body.onyx-v2 .onyx-v2-dark :is(p,span,li,div,a,strong,b,h1,h2,h3,h4,.elementor-heading-title){color:var(--ink)!important}
+body.onyx-v2 .onyx-v2-dark :is(p,li){color:var(--body)!important}
+body.onyx-v2 .onyx-v2-dark :is(svg){color:var(--slate)!important}
+body.onyx-v2 .onyx-v2-dark .elementor-button,body.onyx-v2 .onyx-v2-dark .elementor-button *{color:#fff!important}
+/* calculator panel keeps its dark instrument look, in ink */
+body.onyx-v2 .onyx-calc{background:var(--ink)!important;border-radius:24px!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .onyx-calc :is(h1,h2,h3,h4,h5,strong){color:#fff!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .onyx-calc :is(label,.onyx-calc__label){color:rgba(255,255,255,.6)!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .onyx-calc .onyx-calc__input input{background:transparent!important;color:#fff!important;border:0!important;border-radius:12px!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"],.onyx-product) .onyx-calc .onyx-calc__input input::placeholder{color:rgba(255,255,255,.4)!important}
+/* product page (v2 flow only, ?v2=1): editorial title, ink price, black pill CTAs */
+body.onyx-v2 .onyx-product h1{font-size:clamp(34px,3.6vw,52px)!important;line-height:1.05!important}
+body.onyx-v2 .onyx-product .bg-accent{background:var(--ink)!important;color:#fff!important;box-shadow:none!important;border-radius:999px!important}
+body.onyx-v2 .onyx-product .border-primary{border-color:var(--ink)!important;color:var(--ink)!important;border-radius:999px!important}
+body.onyx-v2 .onyx-product .border-primary:hover{background:var(--ink)!important;color:#fff!important}
+body.onyx-v2 .onyx-product .bg-secondary{background:transparent!important;border-color:var(--line)!important}
+body.onyx-v2 .onyx-product img{border-radius:24px}
+/* eyebrow labels beside headings: decorative glyph (e.g. the sparkle on Contact) removed, text untouched */
+body.onyx-v2 .elementor .elementor-widget__width-auto.elementor-widget-text-editor:has(+.elementor-widget-heading) p>svg:first-child,
+body.onyx-v2 .onyx-v2-eyebrow p>svg:first-child{display:none!important}
+body.onyx-v2 .elementor .elementor-widget__width-auto.elementor-widget-text-editor:has(+.elementor-widget-heading):has(p>svg:first-child){padding-left:16px!important;padding-right:16px!important}
+/* policy pages: "On this page" table of contents – whole card visible, sticky below the header, scrolls inside if taller than the viewport */
+body.onyx-v2 .elementor .e-con.onyx-v2-sticky{position:sticky!important;top:calc(var(--onyx-v2-hdr,125px) + 24px)!important;align-self:start!important;height:auto!important;min-height:0!important;
+ max-height:calc(100vh - var(--onyx-v2-hdr,125px) - 48px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line) transparent;z-index:2}
+body.onyx-v2 .elementor .e-con.onyx-v2-toc{background:#fff!important;border:1px solid var(--line)!important;border-radius:24px!important;
+ padding:22px 16px 18px!important;box-shadow:0 24px 48px -36px rgba(21,23,28,.28);scrollbar-width:thin;scrollbar-color:var(--line) transparent;z-index:2}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"]) .onyx-v2-sticky .onyx-v2-toc-title{font-family:var(--sans)!important;font-size:12.5px!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--slate)!important;font-weight:600!important;line-height:1.4!important;white-space:normal!important;margin:0 0 10px 8px!important}
+body.onyx-v2 .onyx-v2-toc .e-con{background:transparent!important;border:0!important;box-shadow:none!important;height:auto!important}
+body.onyx-v2 .onyx-v2-toc a{border-radius:10px}
+/* sidebar: label fully inside the card, and a guaranteed gap to the content column at every desktop width */
+body.onyx-v2 .elementor .e-con.onyx-v2-toc{padding:24px 18px 20px!important;box-sizing:border-box!important;max-width:100%!important}
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"]) .onyx-v2-sticky .onyx-v2-toc-title{margin:0 0 12px 6px!important;overflow-wrap:anywhere}
+body.onyx-v2 .elementor[data-elementor-type="wp-page"] .e-con:is(.e-grid,.e-con-inner,.e-con-boxed):has(>.onyx-v2-sticky),body.onyx-v2 .elementor[data-elementor-type="wp-page"] .e-con .e-con-inner:has(>.onyx-v2-sticky){column-gap:40px!important}
+body.onyx-v2 .elementor .onyx-v2-sticky+*,body.onyx-v2 .elementor *:has(+.onyx-v2-sticky){min-width:0!important}
+/* deploy28f – product cards on -2 pages: no hover motion, View Details fits its own card, plan images not covered */
+body.onyx-v2 :is(#content,main) ul.products{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px!important;margin:0!important;padding:0!important}
+body.onyx-v2 :is(#content,main) ul.products::before,body.onyx-v2 :is(#content,main) ul.products::after{display:none!important}
+body.onyx-v2 :is(#content,main) ul.products li.product{width:auto!important;margin:0!important;float:none!important;min-width:0;display:flex!important;flex-direction:column}
+body.onyx-v2 :is(#content,main) ul.products li.product .onyx-view-details,body.onyx-v2 :is(#content,main) .onyx-tw a.block.w-full{display:block!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;margin:auto 0 0!important;padding:12px 10px!important;font-size:11.5px!important;letter-spacing:.14em!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;transform:none!important}
+body.onyx-v2 :is(#content,main) ul.products li.product,body.onyx-v2 :is(#content,main) ul.products li.product *,body.onyx-v2 :is(#content,main) .onyx-tw .group,body.onyx-v2 :is(#content,main) .onyx-tw .group *{transition:none!important}
+body.onyx-v2 :is(#content,main) ul.products li.product:hover,body.onyx-v2 :is(#content,main) ul.products li.product:hover img,body.onyx-v2 :is(#content,main) .onyx-tw .group:hover,body.onyx-v2 :is(#content,main) .onyx-tw .group:hover img,body.onyx-v2 :is(#content,main) .onyx-tw a:hover{transform:none!important;scale:none!important;translate:none!important}
+body.onyx-v2 :is(#content,main) ul.products li.product:hover,body.onyx-v2 :is(#content,main) .onyx-tw .group:hover{box-shadow:none!important}
+body.onyx-v2 :is(#content,main) ul.products li.product img{background:#f7f6f9;mix-blend-mode:multiply}
+/* Peptide Plans 2: the programme photos were hidden by the image overlays once --primary became solid ink; drop the overlays, keep the photos */
+body.onyx-v2 :is(#content,main,[data-elementor-type="wp-page"]) .relative>.absolute.inset-0:is([class*="bg-primary"],[class*="from-primary"]){display:none!important}
+@media(max-width:1100px){body.onyx-v2 :is(#content,main) ul.products{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:860px){body.onyx-v2 :is(#content,main) ul.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px!important}}
+body.onyx-v2 :is(#content,main) ul.products li.product .onyx-view-details{width:calc(100% - 28px)!important;margin:auto 14px 14px!important;border-radius:999px!important}
