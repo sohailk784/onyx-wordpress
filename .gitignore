@@ -31,3 +31,6 @@ node_modules/
 __pycache__/
 *.log
 .DS_Store
+
+# deploy SQL deliverables are versioned (they hold no data dumps)
+!deploy*/**/*.sql
