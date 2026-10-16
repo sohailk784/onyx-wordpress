@@ -74,3 +74,9 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
   - the text is unchanged.
 - Mobile/tablet: these sidebars are hidden on tablet and mobile by the original page's own Elementor settings, so they are not shown there. The settings were left as authored.
 - Crops: `fix-toc-crops/{before,after}-<page>-{desktop,mobile}-{start,mid,late}.png`. Card position per scroll step: `_before-visibility.txt` and `_after-visibility.txt` (after: the card is pinned at top ≈149px at mid-scroll on every page).
+
+## Fix: sidebar label size and spacing (7 pages)
+- The "On this page" label and the Product Catalogue 2 "Categories" label are now 12.5px uppercase with 0.22em letter-spacing in slate, matching the eyebrow labels. Each sits inside its white card with 24px/18px padding.
+- The sidebar-to-content column gap is forced to 40px; this overrides the v2 grid gap, which was 18px on the catalogue.
+- Checked at 1025, 1100, 1200, 1280, 1366 and 1440 on all 7 pages (`fix-toc-label-crops/_gap-label-check.txt`): gap 40px everywhere, label fully inside its card. At 1024 and below the original pages hide the sidebar.
+- After crops: `fix-toc-label-crops/after-{terms-conditions-2,privacy-policy-2,product-catalogue-2}-{1440,1280}-{start,mid}.png`.

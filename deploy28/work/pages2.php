@@ -124,7 +124,7 @@ add_action( 'wp_footer', function () {
 		/* climb to the sidebar column: an e-con whose row sibling is much taller (the main content) */
 		var col=h.closest('.e-con'),x=col;while(x&&x!==r){var par=x.parentElement,sib=par?[].filter.call(par.children,function(k){return k!==x&&k.offsetHeight>0}):[];
 			var ch=[].reduce.call(x.children,function(a,k){return a+k.offsetHeight},0);if(x.classList.contains('e-con')&&x.offsetWidth<420&&sib.some(function(k){return k.offsetHeight>Math.max(ch*1.3,900)&&Math.abs(k.getBoundingClientRect().top-x.getBoundingClientRect().top)<60})){col=x;break}x=par}
-		if(!col||x===r||col.classList.contains('onyx-v2-sticky'))return;col.classList.add('onyx-v2-sticky');if(toc){col.classList.add('onyx-v2-toc');h.classList.add('onyx-v2-toc-title');h.style.whiteSpace=''}});
+		if(!col||x===r||col.classList.contains('onyx-v2-sticky'))return;col.classList.add('onyx-v2-sticky');h.classList.add('onyx-v2-toc-title');h.style.whiteSpace='';if(toc)col.classList.add('onyx-v2-toc')});
 	var hd=document.querySelector('header.onyx-header,header'),setH=function(){if(hd&&getComputedStyle(hd).position!=='static')document.body.style.setProperty('--onyx-v2-hdr',hd.offsetHeight+'px')};setH();addEventListener('resize',setH);
 	[].forEach.call(r.children,function(el){if(parseFloat(getComputedStyle(el).paddingLeft)<12)el.classList.add('onyx-v2-pad')});})();</script>
 	<?php
