@@ -26,3 +26,10 @@ Files:
 - The zip was rebuilt and re-verified: 216 files, all custom references present (see work/zip-check.txt).
 - Mixed-grid spot checks: after-p2-page4-mixed-*, after-p2-page7-mixed-*.
 - When more images arrive: run homev2/make27.sh again.
+
+## Update (Oct 16, 12:55 PM PKT): bigger portrait cards
+- GPP measured: 4 columns in a 1100px grid, 269px cards, 269x403 image area (2:3), 8px gaps; mobile 2 columns of 178px.
+- Peptides 2 now uses 3 columns on desktop (about 384px cards with a 3:4 image area, roughly 384x512, gaps 48/20) and 2 columns on mobile and tablet (3:4, gaps 30/10). Titles are 26px serif (19px on mobile), and there are 18 products per page.
+- Premium images show uncropped and are feathered into the light-blue backdrop. Original photos are scaled up about 1.3x to fill the taller area.
+- Premium images: 91 of 116 products (chatgpt-out2 PNGs plus the 6 earlier ones). Zip rebuilt and verified (work/zip-check.txt).
+- Comparison: compare-gpp-vs-peptides2-desktop.png (GPP reference: gpp-collection-desktop-ref.png)

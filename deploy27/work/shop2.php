@@ -44,9 +44,9 @@ function onyx_shop2_card( $p, $premium, $eager = false ) {
 	<li class="s2-card<?php echo isset( $premium[ $id ] ) ? ' s2-premium' : ''; ?>">
 		<a class="s2-media" href="<?php echo esc_url( $url ); ?>">
 			<?php if ( isset( $premium[ $id ] ) ) : ?>
-				<img src="<?php echo esc_url( $premium[ $id ]['src'] ); ?>" srcset="<?php echo esc_attr( $premium[ $id ]['srcset'] ); ?>" sizes="(max-width:767px) 46vw, 280px" width="800" height="800" alt="<?php echo esc_attr( $p->get_name() ); ?>" loading="<?php echo esc_attr( $load ); ?>" decoding="async">
+				<img src="<?php echo esc_url( $premium[ $id ]['src'] ); ?>" srcset="<?php echo esc_attr( $premium[ $id ]['srcset'] ); ?>" sizes="(max-width:767px) 48vw, 420px" width="800" height="800" alt="<?php echo esc_attr( $p->get_name() ); ?>" loading="<?php echo esc_attr( $load ); ?>" decoding="async">
 			<?php elseif ( $p->get_image_id() ) : ?>
-				<?php echo wp_get_attachment_image( $p->get_image_id(), 'woocommerce_single', false, array( 'sizes' => '(max-width:767px) 46vw, 280px', 'loading' => $load, 'decoding' => 'async', 'alt' => $p->get_name() ) ); // phpcs:ignore ?>
+				<?php echo wp_get_attachment_image( $p->get_image_id(), 'woocommerce_single', false, array( 'sizes' => '(max-width:767px) 48vw, 420px', 'loading' => $load, 'decoding' => 'async', 'alt' => $p->get_name() ) ); // phpcs:ignore ?>
 			<?php endif; ?>
 			<span class="s2-badges">
 				<?php if ( $coming ) : ?><span class="s2-badge s2-b-soon">Coming soon</span><?php endif; ?>
@@ -78,7 +78,7 @@ add_shortcode( 'onyx_shop2', function () {
 	$max   = isset( $_GET['s2_max'] ) && '' !== $_GET['s2_max'] ? max( 0, (float) $_GET['s2_max'] ) : null;
 	$page  = max( 1, (int) ( $_GET['s2_pg'] ?? 1 ) );
 	// phpcs:enable
-	$per   = 16;
+	$per   = 18;
 
 	$all = wc_get_products( array( 'limit' => -1, 'status' => 'publish', 'orderby' => 'menu_order', 'order' => 'ASC', 'visibility' => 'catalog' ) );
 	$all = array_values( array_filter( $all, fn( $p ) => 'programs' !== $p->get_meta( '_onyx_category' ) && ! has_term( 'programs', 'product_cat', $p->get_id() ) ) );
