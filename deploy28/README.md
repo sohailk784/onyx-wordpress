@@ -114,3 +114,9 @@ Peptides 2 → product?v2=1 → Add to cart → cart-2 → Checkout (links to /c
   - black pill buttons; the navy CTA panel becomes a neutral panel
   - full image (aspect auto, contain), no hover
 - Add-to-cart forms keep `?v2=1`. Content unchanged.
+
+## deploy28k
+- Home V2 "Shop by category" tiles (and the section links "View all" / "View all peptides") pointed to the original storefront archive `/peptides/<cat>/`, which uses the old blue layout. `home-v2.js` now sends them to Peptides 2 filtered by category (`/peptides-2/?s2_cat=<cat>`, or `/peptide-plans-2/` for plans). The header menu is shared, so it is unchanged.
+- In the 2 flow, a category archive `/peptides/<cat>/?v2=1` now 302-redirects to `/peptides-2/?s2_cat=<cat>` (`inc/pages2.php`). Without `?v2` it is unchanged.
+- The Home V2 "Weight loss peptides" grid (old white bordered cards, light-blue View Details) now matches Bestsellers / Peptides 2: 4 x 2:3 #f7f6f9 cards in 1100px with 8px gaps, an outline button, and no hover.
+- Peptides 2 has no category tiles, only filter chips, which are already neutral. The other -2 pages show no category or product tiles.

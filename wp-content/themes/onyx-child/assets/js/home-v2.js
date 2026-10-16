@@ -30,6 +30,15 @@
 		var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('hv2-in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
 		document.querySelectorAll('.hv2-sec').forEach(function (s, i) { if (i > 0) { io.observe(s); } else { s.classList.add('hv2-in'); } });
 	}
-	function go() { clean(); pager(); reveal(); }
+	// deploy28j: category tiles stay in the 2 flow – open Peptides 2 filtered by that category instead of the original storefront archive.
+	function tiles() {
+		document.querySelectorAll('.hv2-sec a[href*="/peptides/"]').forEach(function (a) {
+			var m = a.getAttribute('href').match(/^(.*?)\/peptides\/([a-z0-9-]+)\/?(?:[?#].*)?$/);
+			if (m) { a.setAttribute('href', m[2] === 'plans' ? m[1] + '/peptide-plans-2/' : m[1] + '/peptides-2/?s2_cat=' + m[2]); return; }
+			var r = a.getAttribute('href').match(/^(.*?)\/peptides\/?(?:[?#].*)?$/);
+			if (r) { a.setAttribute('href', r[1] + '/peptides-2/'); }
+		});
+	}
+	function go() { clean(); tiles(); pager(); reveal(); }
 	if (document.readyState !== 'loading') { go(); } else { document.addEventListener('DOMContentLoaded', go); }
 })();
